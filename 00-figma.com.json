@@ -42,7 +42,7 @@
             }
         },
         {
-            "executionType": "linked",
+            "executionType": "separate",
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -193,14 +193,14 @@
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "name_on_card",
+                "cardProperty": "name",
                 "events": [
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input[name=\"name_on_card\"]",
                 "type": "fire_events",
-                "value": "Michael Xu"
+                "value": ""
             }
         },
         {
@@ -215,14 +215,14 @@
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "address_line1",
+                "cardProperty": "address",
                 "events": [
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input[name=\"line1\"]",
                 "type": "fire_events",
-                "value": "3494 Dach Green"
+                "value": ""
             }
         },
         {
@@ -237,14 +237,14 @@
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "address_line2",
+                "cardProperty": "address2",
                 "events": [
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input[name=\"line2\"]",
                 "type": "fire_events",
-                "value": "3494 Dach Green"
+                "value": ""
             }
         },
         {
@@ -266,7 +266,7 @@
                 ],
                 "selector": "select[name=\"country\"]",
                 "type": "fire_events",
-                "value": "US"
+                "value": ""
             }
         },
         {
@@ -288,7 +288,7 @@
                 ],
                 "selector": "input[name=\"city\"]",
                 "type": "fire_events",
-                "value": "Mountain View"
+                "value": ""
             }
         },
         {
@@ -310,7 +310,7 @@
                 ],
                 "selector": "select[name=\"region\"]",
                 "type": "fire_events",
-                "value": "CA"
+                "value": ""
             }
         },
         {
@@ -325,14 +325,14 @@
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "postal_code",
+                "cardProperty": "zip",
                 "events": [
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input[name=\"postal_code\"]",
                 "type": "fire_events",
-                "value": "94040"
+                "value": ""
             }
         },
         {

@@ -269,6 +269,29 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "[role=\"option\"]:first-child"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Selecting city and state from the dropdown",
+                "title": "Select city and state from the dropdown"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "[role=\"option\"]:first-child",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "button[data-testid=\"cta-button\"]"
                         }
                     ]

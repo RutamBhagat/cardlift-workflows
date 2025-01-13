@@ -315,7 +315,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div#defaultPayment:contains(\"$cardNumber\")"
+                            "sizzleSelector": "[data-testid=\"current-card-details\"] p:contains(\"$cardNumber\")"
                         }
                     ]
                 }
@@ -324,6 +324,11 @@
             "info": {
                 "message": "Validating payment method",
                 "title": "Payment method validation"
+            },
+            "operation": {
+                "events": [],
+                "selector": "[data-testid=\"current-card-details\"] p:contains(\"$cardNumber\")",
+                "type": "fire_events"
             }
         }
     ],

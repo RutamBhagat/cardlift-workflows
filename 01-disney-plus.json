@@ -1,0 +1,309 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "disneyplus.com",
+    "id": "",
+    "name": "Disney Plus",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.disneyplus.com/home"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/identity/login/enter-email"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Please provide your login credentials",
+                "title": "Provide login credentials"
+            },
+            "operation": {
+                "message": "Please provide your login credentials",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.disneyplus.com/home"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/identity/login/enter-password"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Please provide your login credentials",
+                "title": "Provide login credentials"
+            },
+            "operation": {
+                "message": "Please provide your login credentials",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.disneyplus.com/home"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "li[data-testid=\"dropdown-active-profile\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on the profile button",
+                "title": "Click on the profile button"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "li[data-testid=\"dropdown-active-profile\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "li[data-testid=\"dropdown-option-3-account\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on the Account link",
+                "title": "Click on the Account link"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "li[data-testid=\"dropdown-option-3-account\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li > button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on your subscription from the subscriptions section",
+                "title": "Click on your subscription from the subscriptions section"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li > button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid=\"changePaymentMethod\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on change payment",
+                "title": "Click on change payment"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"changePaymentMethod\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[data-testid=\"name-on-card\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Autofilling NAME ON CARD",
+                "title": "Autofill NAME ON CARD"
+            },
+            "operation": {
+                "type": "autofill_card_data"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[data-testid=\"card-number\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Autofilling CARD NUMBER",
+                "title": "Autofilling CARD NUMBER"
+            },
+            "operation": {
+                "type": "autofill_card_data"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[data-testid=\"expiration-date\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Autofilling EXPIRY DATE",
+                "title": "Autofill EXPIRY DATE"
+            },
+            "operation": {
+                "type": "autofill_card_data"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[data-testid=\"card-csc\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Autofilling SECURITY CODE",
+                "title": "Autofill SECURITY CODE"
+            },
+            "operation": {
+                "type": "autofill_card_data"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[data-testid=\"zip-code-input\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on ZIP Code input and filling it",
+                "title": "Click on ZIP Code input and fill it"
+            },
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[data-testid=\"zip-code-input\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid=\"cta-button\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on save button",
+                "title": "Click on save button"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"cta-button\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div#defaultPayment:contains(\"$cardNumber\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Validating payment method",
+                "title": "Payment method validation"
+            }
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

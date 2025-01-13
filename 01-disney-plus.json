@@ -174,11 +174,18 @@
             ],
             "executionType": "separate",
             "info": {
-                "message": "Autofilling NAME ON CARD",
-                "title": "Autofill NAME ON CARD"
+                "message": "Filling name on card",
+                "title": "Fill name on card"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "name",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[data-testid=\"name-on-card\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -193,11 +200,18 @@
             ],
             "executionType": "separate",
             "info": {
-                "message": "Autofilling CARD NUMBER",
-                "title": "Autofilling CARD NUMBER"
+                "message": "Filling card number",
+                "title": "Filling card number"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardNumber",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[data-testid=\"card-number\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -212,11 +226,18 @@
             ],
             "executionType": "separate",
             "info": {
-                "message": "Autofilling EXPIRY DATE",
-                "title": "Autofill EXPIRY DATE"
+                "message": "Filling expiry date",
+                "title": "Fill expiry date"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardExpirationDate",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[data-testid=\"expiration-date\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -231,11 +252,18 @@
             ],
             "executionType": "separate",
             "info": {
-                "message": "Autofilling SECURITY CODE",
-                "title": "Autofill SECURITY CODE"
+                "message": "Filling security code",
+                "title": "Fill security code"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardCvc",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[data-testid=\"card-csc\"]",
+                "type": "fire_events"
             }
         },
         {

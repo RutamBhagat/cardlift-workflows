@@ -10,14 +10,14 @@
         {
             "executionType": "separate",
             "info": {
-                "message": "We are filling your billing details",
-                "title": "Filling Billing Details"
+                "message": "Finding billing page",
+                "title": "Billing page"
             },
             "isRequired": true,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.disneyplus.com/home"
+                "url": "https://www.disneyplus.com/identity/login/enter-email"
             }
         },
         {
@@ -31,32 +31,7 @@
             "executionType": "separate",
             "info": {
                 "message": "Please provide your login credentials",
-                "title": "Provide login credentials"
-            },
-            "operation": {
-                "message": "Please provide your login credentials",
-                "successConditional": [
-                    {
-                        "urlSelectors": [
-                            "https://www.disneyplus.com/home"
-                        ]
-                    }
-                ],
-                "type": "await_user_help"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/identity/login/enter-password"
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Please provide your login credentials",
-                "title": "Provide login credentials"
+                "title": "Login Credentials"
             },
             "operation": {
                 "message": "Please provide your login credentials",
@@ -82,8 +57,8 @@
             ],
             "executionType": "separate",
             "info": {
-                "message": "Clicking on the profile button",
-                "title": "Click on the profile button"
+                "message": "Finding billing page",
+                "title": "Billing page"
             },
             "operation": {
                 "events": [
@@ -104,10 +79,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Clicking on the Account link",
-                "title": "Click on the Account link"
-            },
             "operation": {
                 "events": [
                     "click"
@@ -121,21 +92,17 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li > button"
+                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Clicking on your subscription from the subscriptions section",
-                "title": "Click on your subscription from the subscriptions section"
-            },
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li > button",
+                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button",
                 "type": "fire_events"
             }
         },
@@ -150,10 +117,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Clicking on change payment",
-                "title": "Click on change payment"
-            },
             "operation": {
                 "events": [
                     "click"
@@ -174,8 +137,8 @@
             ],
             "executionType": "separate",
             "info": {
-                "message": "Filling name on card",
-                "title": "Fill name on card"
+                "message": "Filling card details",
+                "title": "Card Details"
             },
             "operation": {
                 "cardProperty": "name",
@@ -199,10 +162,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Filling card number",
-                "title": "Filling card number"
-            },
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -225,10 +184,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Filling expiry date",
-                "title": "Fill expiry date"
-            },
             "operation": {
                 "cardProperty": "cardExpirationDate",
                 "events": [
@@ -251,10 +206,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Filling security code",
-                "title": "Fill security code"
-            },
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [
@@ -277,10 +228,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Clicking on ZIP Code input and filling it",
-                "title": "Click on ZIP Code input and fill it"
-            },
             "operation": {
                 "cardProperty": "zip",
                 "events": [
@@ -297,21 +244,18 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[role=\"option\"]:first-child"
+                            "sizzleSelector": "div[role=\"listbox\"] div[data-testid=\"zip-code-item-0\"]"
                         }
                     ]
                 }
             ],
-            "executionType": "separate",
-            "info": {
-                "message": "Selecting city and state from the dropdown",
-                "title": "Select city and state from the dropdown"
-            },
+            "executionType": "linked",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "[role=\"option\"]:first-child",
+                "selector": "div[role=\"listbox\"] div[data-testid=\"zip-code-item-0\"]",
                 "type": "fire_events"
             }
         },
@@ -325,11 +269,8 @@
                     ]
                 }
             ],
-            "executionType": "separate",
-            "info": {
-                "message": "Clicking on save button",
-                "title": "Click on save button"
-            },
+            "executionType": "linked",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -349,10 +290,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Validating payment method",
-                "title": "Payment method validation"
-            },
             "operation": {
                 "events": [],
                 "selector": "[data-testid=\"current-card-details\"] p:contains(\"$cardNumber\")",

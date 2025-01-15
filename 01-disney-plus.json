@@ -87,6 +87,13 @@
                     "urlSelectors": [
                         "https://www.disneyplus.com/home"
                     ]
+                },
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[data-testid=\"dropdown-active-profile\"]"
+                        }
+                    ]
                 }
             ],
             "executionType": "separate",

@@ -13,7 +13,7 @@
                 "message": "Finding billing page",
                 "title": "Billing page"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",

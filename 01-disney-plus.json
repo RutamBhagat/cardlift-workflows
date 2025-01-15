@@ -35,11 +35,10 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "div[id=\"account-dropdown\"]"
+                                "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
                         ],
                         "urlSelectors": [
-                            "https://www.disneyplus.com/home",
                             "https://www.disneyplus.com/select-profile"
                         ]
                     }
@@ -62,12 +61,10 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "div[id=\"account-dropdown\"]"
+                                "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
                         ],
-                        "urlSelectors": [
-                            "https://www.disneyplus.com/home"
-                        ]
+                        "urlSelectors": []
                     }
                 ],
                 "type": "await_user_help"
@@ -76,14 +73,9 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/home"
-                    ]
-                },
-                {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[data-testid=\"dropdown-active-profile\"]"
+                            "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                         }
                     ]
                 }

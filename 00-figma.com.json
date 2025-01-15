@@ -77,7 +77,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "i18n-text:contains(\"Settings\")"
+                            "sizzleSelector": "div[role=\"link\"] i18n-text:contains(\"Settings\")"
                         }
                     ]
                 }
@@ -92,7 +92,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "i18n-text:contains(\"Settings\")",
+                "selector": "div[role=\"link\"] i18n-text:contains(\"Settings\")",
                 "type": "fire_events"
             }
         },
@@ -101,7 +101,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.settings_section--settingLabel--3KYCt div:contains(\"Payment details\")"
+                            "sizzleSelector": "div.settings_section--actionSetting--EteQO.settings_section--setting--IEuf9 div:contains(\"Payment details\")"
                         }
                     ]
                 }
@@ -116,7 +116,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div.settings_section--settingLabel--3KYCt div:contains(\"Payment details\")",
+                "selector": "div.settings_section--actionSetting--EteQO.settings_section--setting--IEuf9 div:contains(\"Payment details\")",
                 "type": "fire_events"
             }
         },
@@ -137,10 +137,16 @@
             },
             "info": {
                 "message": "Please make sure you already have your credit card info saved on your browser",
-                "title": "Autofilling card name"
+                "title": "Autofilling card number"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"number\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -159,7 +165,13 @@
                 "title": "Autofilling Expiration Date"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardExpirationDate",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"expiry\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -178,7 +190,13 @@
                 "title": "Autofilling CVV"
             },
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardCvc",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"cvc\"]",
+                "type": "fire_events"
             }
         },
         {

@@ -37,7 +37,9 @@
                             {
                                 "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
-                        ],
+                        ]
+                    },
+                    {
                         "urlSelectors": [
                             "https://www.disneyplus.com/select-profile"
                         ]

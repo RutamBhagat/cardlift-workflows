@@ -33,20 +33,10 @@
                 "message": "Please provide your login credentials",
                 "successConditional": [
                     {
+                        "elementSelectors": [],
                         "urlSelectors": [
+                            "https://www.disneyplus.com/home",
                             "https://www.disneyplus.com/select-profile"
-                        ]
-                    },
-                    {
-                        "urlSelectors": [
-                            "https://www.disneyplus.com/home"
-                        ]
-                    },
-                    {
-                        "elementSelectors": [
-                            {
-                                "sizzleSelector": "a[data-testid=\"dropdown-active-profile\"]"
-                            }
                         ]
                     }
                 ],
@@ -68,13 +58,6 @@
                     {
                         "urlSelectors": [
                             "https://www.disneyplus.com/home"
-                        ]
-                    },
-                    {
-                        "elementSelectors": [
-                            {
-                                "sizzleSelector": "a[data-testid=\"dropdown-active-profile\"]"
-                            }
                         ]
                     }
                 ],

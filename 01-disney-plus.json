@@ -29,13 +29,14 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Please provide your login credentials",
-                "title": "Login Credentials"
-            },
             "operation": {
                 "message": "Please provide your login credentials",
                 "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.disneyplus.com/select-profile"
+                        ]
+                    },
                     {
                         "urlSelectors": [
                             "https://www.disneyplus.com/home"
@@ -48,43 +49,39 @@
         {
             "conditional": [
                 {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "li[data-testid=\"dropdown-active-profile\"]"
-                        }
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/select-profile"
                     ]
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Finding billing page",
-                "title": "Billing page"
-            },
             "operation": {
-                "events": [
-                    "click"
+                "message": "Please select your profile and provide your PIN, if required.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.disneyplus.com/home"
+                        ]
+                    }
                 ],
-                "selector": "li[data-testid=\"dropdown-active-profile\"]",
-                "type": "fire_events"
+                "type": "await_user_help"
             }
         },
         {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "li[data-testid=\"dropdown-option-3-account\"]"
-                        }
-                    ]
-                }
-            ],
+            "conditional": [],
             "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
             "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "li[data-testid=\"dropdown-option-3-account\"]",
-                "type": "fire_events"
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.disneyplus.com/commerce/account"
             }
         },
         {

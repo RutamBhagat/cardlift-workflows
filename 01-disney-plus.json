@@ -33,7 +33,11 @@
                 "message": "Please provide your login credentials",
                 "successConditional": [
                     {
-                        "elementSelectors": [],
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "div[id=\"account-dropdown\"]"
+                            }
+                        ],
                         "urlSelectors": [
                             "https://www.disneyplus.com/home",
                             "https://www.disneyplus.com/select-profile"
@@ -56,6 +60,11 @@
                 "message": "Please select your profile and provide your PIN, if required.",
                 "successConditional": [
                     {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "div[id=\"account-dropdown\"]"
+                            }
+                        ],
                         "urlSelectors": [
                             "https://www.disneyplus.com/home"
                         ]

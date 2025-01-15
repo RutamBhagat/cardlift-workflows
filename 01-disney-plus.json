@@ -84,6 +84,7 @@
                 "message": "We are filling your billing details",
                 "title": "Filling Billing Details"
             },
+            "isRequired": true,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -101,6 +102,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -120,6 +122,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -143,6 +146,7 @@
                 "message": "Filling card details",
                 "title": "Card Details"
             },
+            "isRequired": true,
             "operation": {
                 "cardProperty": "name",
                 "events": [
@@ -165,6 +169,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -187,6 +192,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardExpirationDate",
                 "events": [
@@ -209,6 +215,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [
@@ -231,6 +238,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "zip",
                 "events": [
@@ -293,6 +301,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [],
                 "selector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")",

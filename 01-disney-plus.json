@@ -68,7 +68,13 @@
             }
         },
         {
-            "conditional": [],
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/home"
+                    ]
+                }
+            ],
             "executionType": "separate",
             "help": {
                 "message": "We're having trouble finding the billing page.",

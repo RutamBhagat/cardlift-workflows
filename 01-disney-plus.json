@@ -287,7 +287,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-testid=\"current-card-details\"] p:contains(\"$cardNumber\")"
+                            "sizzleSelector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")"
                         }
                     ]
                 }
@@ -295,7 +295,7 @@
             "executionType": "separate",
             "operation": {
                 "events": [],
-                "selector": "[data-testid=\"current-card-details\"] p:contains(\"$cardNumber\")",
+                "selector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")",
                 "type": "fire_events"
             }
         }

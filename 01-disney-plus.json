@@ -105,7 +105,7 @@
                 "message": "We are filling your billing details",
                 "title": "Filling Billing Details"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -123,7 +123,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -143,7 +143,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -167,7 +167,7 @@
                 "message": "Filling card details",
                 "title": "Card Details"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "name",
                 "events": [
@@ -190,7 +190,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -213,7 +213,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardExpirationDate",
                 "events": [
@@ -236,7 +236,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [
@@ -258,8 +258,8 @@
                     ]
                 }
             ],
-            "executionType": "separate",
-            "isRequired": true,
+            "executionType": "linked",
+            "isRequired": false,
             "operation": {
                 "cardProperty": "zip",
                 "events": [
@@ -282,7 +282,7 @@
                 }
             ],
             "executionType": "linked",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -321,7 +321,7 @@
                     ]
                 }
             ],
-            "executionType": "separate",
+            "executionType": "linked",
             "isRequired": true,
             "operation": {
                 "events": [],

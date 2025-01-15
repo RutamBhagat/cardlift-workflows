@@ -41,6 +41,13 @@
                         "urlSelectors": [
                             "https://www.disneyplus.com/home"
                         ]
+                    },
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "a[data-testid=\"dropdown-active-profile\"]"
+                            }
+                        ]
                     }
                 ],
                 "type": "await_user_help"
@@ -61,6 +68,13 @@
                     {
                         "urlSelectors": [
                             "https://www.disneyplus.com/home"
+                        ]
+                    },
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "a[data-testid=\"dropdown-active-profile\"]"
+                            }
                         ]
                     }
                 ],

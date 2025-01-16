@@ -33,12 +33,22 @@
                 "message": "Please provide your login credentials",
                 "successConditional": [
                     {
+                        "elementSelectors": [],
                         "urlSelectors": [
                             "https://www.disneyplus.com/onboarding"
                         ]
                     }
                 ],
                 "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [],
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.disneyplus.com/select-profile"
             }
         },
         {
@@ -57,7 +67,7 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
+                                "sizzleSelector": "li[data-testid=\"dropdown-active-profile\"]"
                             }
                         ],
                         "urlSelectors": []
@@ -71,7 +81,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
+                            "sizzleSelector": "li[data-testid=\"dropdown-active-profile\"]"
                         }
                     ],
                     "urlSelectors": []

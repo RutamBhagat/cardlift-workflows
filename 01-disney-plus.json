@@ -261,7 +261,7 @@
                     ]
                 }
             ],
-            "executionType": "separate",
+            "executionType": "linked",
             "isRequired": false,
             "operation": {
                 "cardProperty": "zip",
@@ -272,7 +272,16 @@
                 ],
                 "selector": "input[data-testid=\"zip-code-input\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[id=\"zip-code-dropdown-input-described-by\"] div span"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -284,7 +293,7 @@
                     ]
                 }
             ],
-            "executionType": "separate",
+            "executionType": "linked",
             "isRequired": false,
             "operation": {
                 "events": [
@@ -304,7 +313,7 @@
                     ]
                 }
             ],
-            "executionType": "separate",
+            "executionType": "linked",
             "isRequired": true,
             "operation": {
                 "events": [
@@ -312,7 +321,8 @@
                 ],
                 "selector": "button[data-testid=\"cta-button\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [

@@ -33,14 +33,7 @@
                 "message": "Please provide your login credentials",
                 "successConditional": [
                     {
-                        "elementSelectors": [
-                            {
-                                "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
-                            }
-                        ],
                         "urlSelectors": [
-                            "https://www.disneyplus.com/home",
-                            "https://www.disneyplus.com/select-profile",
                             "https://www.disneyplus.com/onboarding"
                         ]
                     }
@@ -51,11 +44,7 @@
         {
             "conditional": [
                 {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "label[data-testid=\"add-profile-cta\"]"
-                        }
-                    ],
+                    "elementSelectors": [],
                     "urlSelectors": [
                         "https://www.disneyplus.com/select-profile"
                     ]
@@ -71,9 +60,7 @@
                                 "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
                         ],
-                        "urlSelectors": [
-                            "https://www.disneyplus.com/home"
-                        ]
+                        "urlSelectors": []
                     }
                 ],
                 "type": "await_user_help"
@@ -87,9 +74,7 @@
                             "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                         }
                     ],
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/home"
-                    ]
+                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",
@@ -254,7 +239,7 @@
                     ]
                 }
             ],
-            "executionType": "linked",
+            "executionType": "separate",
             "isRequired": false,
             "operation": {
                 "cardProperty": "zip",
@@ -277,7 +262,7 @@
                     ]
                 }
             ],
-            "executionType": "linked",
+            "executionType": "separate",
             "isRequired": false,
             "operation": {
                 "events": [

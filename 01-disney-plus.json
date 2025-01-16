@@ -325,12 +325,23 @@
             "retryConditional": []
         },
         {
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.disneyplus.com/commerce/subscription"
+            }
+        },
+        {
             "conditional": [
                 {
                     "elementSelectors": [
                         {
                             "sizzleSelector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")"
                         }
+                    ],
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/commerce/subscription"
                     ]
                 }
             ],

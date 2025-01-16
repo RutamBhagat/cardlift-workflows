@@ -37,11 +37,11 @@
                             {
                                 "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
-                        ]
-                    },
-                    {
+                        ],
                         "urlSelectors": [
-                            "https://www.disneyplus.com/select-profile"
+                            "https://www.disneyplus.com/home",
+                            "https://www.disneyplus.com/select-profile",
+                            "https://www.disneyplus.com/onboarding"
                         ]
                     }
                 ],
@@ -51,6 +51,11 @@
         {
             "conditional": [
                 {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "label[data-testid=\"add-profile-cta\"]"
+                        }
+                    ],
                     "urlSelectors": [
                         "https://www.disneyplus.com/select-profile"
                     ]
@@ -66,7 +71,9 @@
                                 "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
                         ],
-                        "urlSelectors": []
+                        "urlSelectors": [
+                            "https://www.disneyplus.com/home"
+                        ]
                     }
                 ],
                 "type": "await_user_help"
@@ -79,6 +86,9 @@
                         {
                             "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                         }
+                    ],
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/home"
                     ]
                 }
             ],
@@ -262,7 +272,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"listbox\"] div[data-testid=\"zip-code-item-0\"]"
+                            "sizzleSelector": "div[data-testid=\"zip-code-item-0\"]"
                         }
                     ]
                 }
@@ -273,7 +283,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div[role=\"listbox\"] div[data-testid=\"zip-code-item-0\"]",
+                "selector": "div[data-testid=\"zip-code-item-0\"]",
                 "type": "fire_events"
             }
         },

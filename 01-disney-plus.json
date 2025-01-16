@@ -43,8 +43,19 @@
             }
         },
         {
-            "conditional": [],
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.disneyplus.com/onboarding"
+                    ]
+                }
+            ],
             "executionType": "separate",
+            "info": {
+                "message": "Please select your profile and provide your PIN, if required.",
+                "title": "Select profile"
+            },
+            "isRequired": true,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -61,6 +72,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": false,
             "operation": {
                 "message": "Please select your profile and provide your PIN, if required.",
                 "successConditional": [

@@ -67,7 +67,7 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "li[data-testid=\"dropdown-active-profile\"]"
+                                "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                             }
                         ],
                         "urlSelectors": []
@@ -81,7 +81,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "li[data-testid=\"dropdown-active-profile\"]"
+                            "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
                         }
                     ],
                     "urlSelectors": []

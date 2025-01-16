@@ -313,7 +313,7 @@
                     ]
                 }
             ],
-            "executionType": "linked",
+            "executionType": "separate",
             "isRequired": true,
             "operation": {
                 "events": [

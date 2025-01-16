@@ -329,6 +329,42 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "span[data-testid=\"payment-info\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.disneyplus.com/commerce/account"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")"
                         }
                     ]

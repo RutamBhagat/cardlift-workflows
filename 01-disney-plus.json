@@ -67,7 +67,7 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
+                                "sizzleSelector": "li[data-testid=\"dropdown-option-3-account\"]"
                             }
                         ],
                         "urlSelectors": []
@@ -81,7 +81,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[data-testid=\"selected-avatar-image\"]"
+                            "sizzleSelector": "li[data-testid=\"dropdown-option-3-account\"]"
                         }
                     ],
                     "urlSelectors": []

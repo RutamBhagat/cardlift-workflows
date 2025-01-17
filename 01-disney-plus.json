@@ -13,7 +13,7 @@
                 "message": "Finding billing page",
                 "title": "Billing page"
             },
-            "isRequired": false,
+            "isRequired": true,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -55,7 +55,7 @@
                 "message": "Please select your profile and provide your PIN, if required.",
                 "title": "Select profile"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -108,7 +108,7 @@
                 "message": "We are filling your billing details",
                 "title": "Filling Billing Details"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -126,7 +126,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -146,7 +146,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -314,7 +314,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"

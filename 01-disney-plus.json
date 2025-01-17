@@ -51,10 +51,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Please select your profile and provide your PIN, if required.",
-                "title": "Select profile"
-            },
             "isRequired": false,
             "operation": {
                 "ignoreFailure": true,
@@ -100,59 +96,11 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "We're having trouble finding the billing page.",
-                "title": "Trouble Finding Billing Page"
-            },
-            "info": {
-                "message": "We are filling your billing details",
-                "title": "Filling Billing Details"
-            },
             "isRequired": false,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.disneyplus.com/commerce/account"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "isRequired": false,
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "button[data-testid=\"changePaymentMethod\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "isRequired": false,
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "button[data-testid=\"changePaymentMethod\"]",
-                "type": "fire_events"
+                "url": "https://www.disneyplus.com/commerce/change-payment"
             }
         },
         {
@@ -166,9 +114,13 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
+            },
             "info": {
-                "message": "Filling card details",
-                "title": "Card Details"
+                "message": "We're filling in your card details ",
+                "title": "Filling in your Card Details"
             },
             "isRequired": false,
             "operation": {

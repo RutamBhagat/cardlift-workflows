@@ -21,21 +21,24 @@
             }
         },
         {
-            "conditional": [
-                {
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/identity/login/enter-email"
-                    ]
-                }
-            ],
+            "conditional": [],
             "executionType": "separate",
             "operation": {
                 "message": "Please provide your login credentials",
                 "successConditional": [
                     {
-                        "elementSelectors": [],
-                        "urlSelectors": [
-                            "https://www.disneyplus.com/onboarding"
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "section[data-testid=\"profiles-wrapper\"]"
+                            }
+                        ],
+                        "urlSelectors": []
+                    },
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "li[data-testid=\"dropdown-option-3-account\"]"
+                            }
                         ]
                     }
                 ],
@@ -45,26 +48,12 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/onboarding"
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "isRequired": false,
-            "operation": {
-                "ignoreFailure": true,
-                "type": "navigate",
-                "url": "https://www.disneyplus.com/select-profile"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [],
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/select-profile"
-                    ]
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "section[data-testid=\"profiles-wrapper\"]"
+                        }
+                    ],
+                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",

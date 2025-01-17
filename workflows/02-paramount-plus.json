@@ -1,0 +1,289 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "paramountplus.com",
+    "id": "",
+    "name": "Paramount Plus",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "info": {
+                "message": "Finding billing page",
+                "title": "Billing page"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.paramountplus.com/account/signin/"
+            }
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "message": "Please provide your login credentials",
+                "successConditional": [
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "TODO!"
+                            }
+                        ],
+                        "urlSelectors": [
+                            "https://www.paramountplus.com/home/"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "type": "navigate",
+                "url": "https://www.paramountplus.com/account/payment"
+            }
+        },
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
+            },
+            "info": {
+                "message": "We're filling in your card details",
+                "title": "Filling in your card details"
+            },
+            "operation": {
+                "cardProperty": "firstName",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "lastName",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "state",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationMonth",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationYear",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "TODO!",
+                "type": "fire_events"
+            },
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "TODO!"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

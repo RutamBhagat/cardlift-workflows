@@ -289,19 +289,15 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://www.paramountplus.com/account/"
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.row .row__info span:contains(\"$cardNumber\")"
+                        }
                     ]
                 }
             ],
             "executionType": "separate",
-            "operation": {
-                "events": [
-                    ""
-                ],
-                "selector": "div.row .row__info span:contains(\"$cardNumber\")",
-                "type": "fire_events"
-            }
+            "isRequired": true
         }
     ],
     "testing": true,

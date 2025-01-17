@@ -285,6 +285,23 @@
                 "selector": "button[type=\"button\"][aria-label=\"Save\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.paramountplus.com/account/"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    ""
+                ],
+                "selector": "div.row .row__info span:contains(\"$cardNumber\")",
+                "type": "fire_events"
+            }
         }
     ],
     "testing": true,

@@ -53,7 +53,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "input[id=\"first-name\"][data-recurly=\"first_name\"]"
                         }
                     ]
                 }
@@ -73,7 +73,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[id=\"first-name\"][data-recurly=\"first_name\"]",
                 "type": "fire_events"
             }
         },
@@ -82,7 +82,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "input[id=\"last-name\"][data-recurly=\"last_name\"]"
                         }
                     ]
                 }
@@ -94,7 +94,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[id=\"last-name\"][data-recurly=\"last_name\"]",
                 "type": "fire_events"
             }
         },
@@ -103,7 +103,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "input[id=\"address\"][data-recurly=\"address1\"]"
                         }
                     ]
                 }
@@ -115,7 +115,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[id=\"address\"][data-recurly=\"address1\"]",
                 "type": "fire_events"
             }
         },
@@ -124,7 +124,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "input[id=\"city\"][data-recurly=\"city\"]"
                         }
                     ]
                 }
@@ -136,7 +136,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[id=\"city\"][data-recurly=\"city\"]",
                 "type": "fire_events"
             }
         },
@@ -145,7 +145,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "select[id=\"state\"][data-recurly=\"state\"]"
                         }
                     ]
                 }
@@ -157,7 +157,7 @@
                     "selectInputData",
                     "change"
                 ],
-                "selector": "TODO!",
+                "selector": "select[id=\"state\"][data-recurly=\"state\"]",
                 "type": "fire_events"
             }
         },
@@ -166,7 +166,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "input[id=\"postal_code\"][data-recurly=\"postal_code\"]"
                         }
                     ]
                 }
@@ -178,7 +178,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[id=\"postal_code\"][data-recurly=\"postal_code\"]",
                 "type": "fire_events"
             }
         },
@@ -187,7 +187,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "div[id=\"cc-number\"][data-recurly=\"number\"] iframe"
                         }
                     ]
                 }
@@ -196,10 +196,11 @@
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
+                    "click",
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[autocomplete=\"cc-number\"]",
                 "type": "fire_events"
             }
         },
@@ -208,7 +209,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "div[id=\"cc-expire-month\"][data-recurly=\"month\"] iframe"
                         }
                     ]
                 }
@@ -220,7 +221,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[autocomplete=\"cc-exp-month\"]",
                 "type": "fire_events"
             }
         },
@@ -229,7 +230,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "div[id=\"cc-expire-year\"][data-recurly=\"year\"] iframe"
                         }
                     ]
                 }
@@ -241,7 +242,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[autocomplete=\"cc-exp-year\"]",
                 "type": "fire_events"
             }
         },
@@ -250,7 +251,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "div[id=\"cc-cvv\"][data-recurly=\"cvv\"]  iframe"
                         }
                     ]
                 }
@@ -262,7 +263,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "TODO!",
+                "selector": "input[autocomplete=\"cc-csc\"]",
                 "type": "fire_events"
             }
         },
@@ -271,7 +272,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "TODO!"
+                            "sizzleSelector": "button[type=\"button\"][aria-label=\"Save\"]"
                         }
                     ]
                 }
@@ -281,7 +282,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "TODO!",
+                "selector": "button[type=\"button\"][aria-label=\"Save\"]",
                 "type": "fire_events"
             }
         }

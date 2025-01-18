@@ -246,7 +246,6 @@
             "operation": {
                 "cardProperty": "zip",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -286,7 +285,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[data-testid=\"zip-code-item-0\"]"
+                            "sizzleSelector": "input[aria-expanded=\"true\"]"
                         }
                     ],
                     "watchedElementSelectors": []

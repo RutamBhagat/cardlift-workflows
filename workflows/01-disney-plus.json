@@ -89,7 +89,46 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.disneyplus.com/commerce/change-payment"
+                "url": "https://www.disneyplus.com/commerce/account"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid=\"changePaymentMethod\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"changePaymentMethod\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -218,7 +257,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[id=\"zip-code-dropdown-input-described-by\"] div span"
+                            "sizzleSelector": "input[aria-expanded=\"false\"]"
                         }
                     ]
                 }
@@ -242,7 +281,17 @@
                 ],
                 "selector": "div[data-testid=\"zip-code-item-0\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[aria-expanded=\"true\"]"
+                        }
+                    ],
+                    "watchedElementSelectors": []
+                }
+            ]
         },
         {
             "conditional": [
@@ -266,13 +315,40 @@
             "retryConditional": []
         },
         {
-            "conditional": [],
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "span[data-testid=\"payment-info\"]"
+                        }
+                    ]
+                }
+            ],
             "executionType": "separate",
             "isRequired": true,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.disneyplus.com/commerce/subscription"
+                "url": "https://www.disneyplus.com/commerce/account"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div[data-testid=\"account_subheader_subscriptions\"] + ul > li:first-child > button",
+                "type": "fire_events"
             }
         },
         {

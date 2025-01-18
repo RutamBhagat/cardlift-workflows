@@ -255,7 +255,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": false,
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -266,7 +266,9 @@
             "retryConditional": []
         },
         {
+            "conditional": [],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
@@ -281,18 +283,11 @@
                             "sizzleSelector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")"
                         }
                     ],
-                    "urlSelectors": [
-                        "https://www.disneyplus.com/commerce/subscription"
-                    ]
+                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
-            "operation": {
-                "events": [],
-                "selector": "span[data-testid=\"payment-info\"]:contains(\"$cardNumber\")",
-                "type": "fire_events"
-            }
+            "isRequired": true
         }
     ],
     "testing": true,

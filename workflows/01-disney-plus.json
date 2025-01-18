@@ -267,7 +267,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[data-testid=\"zip-code-item-0\"]"
+                            "sizzleSelector": "input[aria-expanded=\"true\"]"
                         }
                     ]
                 }

@@ -241,7 +241,7 @@
                     ]
                 }
             ],
-            "executionType": "linked",
+            "executionType": "separate",
             "isRequired": false,
             "operation": {
                 "cardProperty": "zip",
@@ -273,7 +273,7 @@
                     ]
                 }
             ],
-            "executionType": "linked",
+            "executionType": "separate",
             "isRequired": false,
             "operation": {
                 "events": [

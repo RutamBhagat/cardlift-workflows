@@ -207,6 +207,89 @@
                 "selector": "input[id=\"cpcCardCvv\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "label[for=\"cpcBillAddress1\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "",
+                "events": [
+                    "click"
+                ],
+                "selector": "label[for=\"cpcBillAddress1\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"cpcname\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "name",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"cpcname\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"cpccountry\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "country",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[id=\"cpccountry\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"cpcaddress1\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"cpcaddress1\"]",
+                "type": "fire_events"
+            }
         }
     ],
     "testing": true,

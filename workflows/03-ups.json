@@ -290,6 +290,69 @@
                 "selector": "input[id=\"cpcaddress1\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"city\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"city\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[name=\"stateDropdown\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "state",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[name=\"stateDropdown\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"postal\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"postal\"]",
+                "type": "fire_events"
+            }
         }
     ],
     "testing": true,

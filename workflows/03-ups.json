@@ -64,6 +64,44 @@
                 "selector": "a[id=\"apmd_ManageAccountsandPayments\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[id=\"tableActionsBtn0\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[id=\"tableActionsBtn0\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button:contains(\"View Account Details\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button:contains(\"View Account Details\")",
+                "type": "fire_events"
+            }
         }
     ],
     "testing": true,

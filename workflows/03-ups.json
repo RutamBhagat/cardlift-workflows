@@ -102,6 +102,111 @@
                 "selector": "button:contains(\"View Account Details\")",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"cpcCardType\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardType",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[id=\"cpcCardType\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"cpcCardHolderCard\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"cpcCardHolderCard\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"cpcCardExpirationMonth\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationMonth",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[id=\"cpcCardExpirationMonth\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"cpcCardExpirationYear\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationYear",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[id=\"cpcCardExpirationYear\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"cpcCardCvv\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"cpcCardCvv\"]",
+                "type": "fire_events"
+            }
         }
     ],
     "testing": true,

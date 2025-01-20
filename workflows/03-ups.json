@@ -1,0 +1,71 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "ups.com",
+    "id": "",
+    "name": "UPS",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "info": {
+                "message": "Finding billing page",
+                "title": "Billing page"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://wwwapps.ups.com/ppc/dashboard.html"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[data-utg-link-name=\"Login\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please provide your login credentials",
+                "successConditional": [
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "a[id=\"apmd_ManageAccountsandPayments\"]"
+                            }
+                        ],
+                        "urlSelectors": []
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[id=\"apmd_ManageAccountsandPayments\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a[id=\"apmd_ManageAccountsandPayments\"]",
+                "type": "fire_events"
+            }
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

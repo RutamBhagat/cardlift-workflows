@@ -156,14 +156,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Having trouble filling the card number?",
-                "title": "Trouble Filling Card Number"
-            },
-            "info": {
-                "message": "Filling in the card number",
-                "title": "Fill Card Number"
-            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
@@ -196,14 +188,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Having trouble filling the expiration date? Please ensure it is in MM/YY format.",
-                "title": "Trouble Filling Expiration Date"
-            },
-            "info": {
-                "message": "Filling in the expiration date",
-                "title": "Fill Expiration Date"
-            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardExpirationDate",
@@ -236,14 +220,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Having trouble filling the security code? This is usually a 3 or 4 digit number on your card.",
-                "title": "Trouble Filling Security Code"
-            },
-            "info": {
-                "message": "Filling in the security code",
-                "title": "Fill Security Code"
-            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardCvc",
@@ -276,14 +252,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Having trouble filling the first name?",
-                "title": "Trouble Filling First Name"
-            },
-            "info": {
-                "message": "Filling in the first name",
-                "title": "Fill First Name"
-            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "firstName",
@@ -316,14 +284,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Having trouble filling the last name?",
-                "title": "Trouble Filling Last Name"
-            },
-            "info": {
-                "message": "Filling in the last name",
-                "title": "Fill Last Name"
-            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "lastName",
@@ -356,10 +316,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Clicking the Add button",
-                "title": "Add Card"
-            },
             "isRequired": true,
             "operation": {
                 "events": [
@@ -380,10 +336,6 @@
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Verifying the card was added successfully",
-                "title": "Verify Card Added"
-            },
             "isRequired": true
         }
     ],

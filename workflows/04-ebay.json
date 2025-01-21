@@ -80,6 +80,10 @@
                 "message": "Filling in the expiration date",
                 "title": "Fill Expiration Date"
             },
+            "help": {
+                "message": "Having trouble filling the expiration date? Please ensure it is in MM/YY format.",
+                "title": "Trouble Filling Expiration Date"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardExpirationDate",
@@ -106,6 +110,10 @@
             "info": {
                 "message": "Filling in the security code",
                 "title": "Fill Security Code"
+            },
+            "help": {
+                "message": "Having trouble filling the security code? This is usually a 3 or 4 digit number on your card.",
+                "title": "Trouble Filling Security Code"
             },
             "isRequired": true,
             "operation": {
@@ -134,6 +142,10 @@
                 "message": "Filling in the first name",
                 "title": "Fill First Name"
             },
+            "help": {
+                "message": "Having trouble filling the first name?",
+                "title": "Trouble Filling First Name"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "firstName",
@@ -160,6 +172,10 @@
             "info": {
                 "message": "Filling in the last name",
                 "title": "Fill Last Name"
+            },
+            "help": {
+                "message": "Having trouble filling the last name?",
+                "title": "Trouble Filling Last Name"
             },
             "isRequired": true,
             "operation": {
@@ -188,6 +204,10 @@
                 "message": "Selecting the country",
                 "title": "Select Country"
             },
+            "help": {
+                "message": "Having trouble selecting the country?",
+                "title": "Trouble Selecting Country"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "countryFull",
@@ -214,6 +234,10 @@
             "info": {
                 "message": "Filling in the street address",
                 "title": "Fill Street Address"
+            },
+            "help": {
+                "message": "Having trouble filling the street address?",
+                "title": "Trouble Filling Street Address"
             },
             "isRequired": true,
             "operation": {
@@ -242,6 +266,10 @@
                 "message": "Filling in the city",
                 "title": "Fill City"
             },
+            "help": {
+                "message": "Having trouble filling the city?",
+                "title": "Trouble Filling City"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "city",
@@ -256,7 +284,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[id=\"billingAddressCity\"]:contains(\"$city\")"
+                            "sizzleSelector": "input[id=\"billingAddressCity\"][value!=\"\"]"
                         }
                     ]
                 }
@@ -277,6 +305,10 @@
                 "message": "Selecting the state/province/region",
                 "title": "Select State/Province/Region"
             },
+            "help": {
+                "message": "Having trouble selecting the state/province/region?",
+                "title": "Trouble Selecting State/Province/Region"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "stateFull",
@@ -292,7 +324,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "select[id=\"billingAddressState\"]:contains(\"$stateFull\")"
+                            "sizzleSelector": "select[id=\"billingAddressState\"] option[selected=\"selected\"]"
                         }
                     ]
                 }
@@ -312,6 +344,10 @@
             "info": {
                 "message": "Filling in the ZIP code",
                 "title": "Fill ZIP Code"
+            },
+            "help": {
+                "message": "Having trouble filling the ZIP code?",
+                "title": "Trouble Filling ZIP Code"
             },
             "isRequired": true,
             "operation": {
@@ -339,6 +375,10 @@
             "info": {
                 "message": "Filling in the phone number",
                 "title": "Fill Phone Number"
+            },
+            "help": {
+                "message": "Having trouble filling the phone number?",
+                "title": "Trouble Filling Phone Number"
             },
             "isRequired": true,
             "operation": {

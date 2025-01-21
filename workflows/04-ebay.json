@@ -94,7 +94,16 @@
                 ],
                 "selector": "input[id=\"expirationDate\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"expirationDate\"][value=\"$cardExpirationDate\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -125,7 +134,16 @@
                 ],
                 "selector": "input[id=\"securityCode\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"securityCode\"][value=\"$cardCvc\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -156,7 +174,16 @@
                 ],
                 "selector": "input[id=\"firstName\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"firstName\"][value=\"$firstName\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -187,7 +214,16 @@
                 ],
                 "selector": "input[id=\"lastName\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"lastName\"][value=\"$lastName\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -218,7 +254,16 @@
                 ],
                 "selector": "select[id=\"billingAddressCountry\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"billingAddressCountry\"] option[selected=\"selected\"]:contains(\"$countryFull\")"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -249,7 +294,16 @@
                 ],
                 "selector": "input[id=\"billingAddressLine1\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressLine1\"][value=\"$address\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -284,7 +338,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[id=\"billingAddressCity\"][value!=\"\"]"
+                            "sizzleSelector": "input[id=\"billingAddressCity\"][value=\"$city\"]"
                         }
                     ]
                 }
@@ -324,7 +378,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "select[id=\"billingAddressState\"] option[selected=\"selected\"]"
+                            "sizzleSelector": "select[id=\"billingAddressState\"] option[selected=\"selected\"]:contains(\"$stateFull\")"
                         }
                     ]
                 }
@@ -359,7 +413,16 @@
                 ],
                 "selector": "input[id=\"billingAddressZipCode\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressZipCode\"][value=\"$zip\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -390,7 +453,16 @@
                 ],
                 "selector": "input[id=\"billingAddressPhoneNumber\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressPhoneNumber\"][value=\"$phone\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [

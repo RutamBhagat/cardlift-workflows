@@ -246,13 +246,21 @@
             "operation": {
                 "cardProperty": "city",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input[id=\"billingAddressCity\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressCity\"]:contains(\"$city\")"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -279,7 +287,16 @@
                 ],
                 "selector": "select[id=\"billingAddressState\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"billingAddressState\"]:contains(\"$stateFull\")"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [

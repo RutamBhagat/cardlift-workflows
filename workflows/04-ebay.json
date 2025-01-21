@@ -50,7 +50,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "section.payment-options button[data-testid=\"icf-credit-card\"]:first"
+                            "sizzleSelector": "button[data-testid=\"new-option-desktop\"]"
                         }
                     ]
                 }
@@ -61,7 +61,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "section.payment-options button[data-testid=\"icf-credit-card\"]:first",
+                "selector": "button[data-testid=\"new-option-desktop\"]",
                 "type": "fire_events"
             }
         },
@@ -70,421 +70,78 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[id=\"expirationDate\"]"
+                            "sizzleSelector": "label[data-testid=\"use-case-0\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "info": {
-                "message": "Filling in the expiration date",
-                "title": "Fill Expiration Date"
-            },
-            "help": {
-                "message": "Having trouble filling the expiration date? Please ensure it is in MM/YY format.",
-                "title": "Trouble Filling Expiration Date"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "cardExpirationDate",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"expirationDate\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"expirationDate\"]:contains(\"$cardExpirationDate\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"securityCode\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the security code",
-                "title": "Fill Security Code"
-            },
-            "help": {
-                "message": "Having trouble filling the security code? This is usually a 3 or 4 digit number on your card.",
-                "title": "Trouble Filling Security Code"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "cardCvc",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"securityCode\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"securityCode\"]:contains(\"$cardCvc\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"firstName\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the first name",
-                "title": "Fill First Name"
-            },
-            "help": {
-                "message": "Having trouble filling the first name?",
-                "title": "Trouble Filling First Name"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "firstName",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"firstName\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"firstName\"]:contains(\"$firstName\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"lastName\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the last name",
-                "title": "Fill Last Name"
-            },
-            "help": {
-                "message": "Having trouble filling the last name?",
-                "title": "Trouble Filling Last Name"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "lastName",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"lastName\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"lastName\"]:contains(\"$lastName\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "select[id=\"billingAddressCountry\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Selecting the country",
-                "title": "Select Country"
-            },
-            "help": {
-                "message": "Having trouble selecting the country?",
-                "title": "Trouble Selecting Country"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "countryFull",
-                "events": [
-                    "click",
-                    "selectInputData",
-                    "change"
-                ],
-                "selector": "select[id=\"billingAddressCountry\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "select[id=\"billingAddressCountry\"] option[selected=\"selected\"]:contains(\"$countryFull\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressLine1\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the street address",
-                "title": "Fill Street Address"
-            },
-            "help": {
-                "message": "Having trouble filling the street address?",
-                "title": "Trouble Filling Street Address"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "address",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"billingAddressLine1\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressLine1\"]:contains(\"$address\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressCity\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the city",
-                "title": "Fill City"
-            },
-            "help": {
-                "message": "Having trouble filling the city?",
-                "title": "Trouble Filling City"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "city",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"billingAddressCity\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressCity\"]:contains(\"$city\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "select[id=\"billingAddressState\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Selecting the state/province/region",
-                "title": "Select State/Province/Region"
-            },
-            "help": {
-                "message": "Having trouble selecting the state/province/region?",
-                "title": "Trouble Selecting State/Province/Region"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "stateFull",
-                "events": [
-                    "click",
-                    "selectInputData",
-                    "change"
-                ],
-                "selector": "select[id=\"billingAddressState\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "select[id=\"billingAddressState\"] option[selected=\"selected\"]:contains(\"$stateFull\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressZipCode\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the ZIP code",
-                "title": "Fill ZIP Code"
-            },
-            "help": {
-                "message": "Having trouble filling the ZIP code?",
-                "title": "Trouble Filling ZIP Code"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "zip",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"billingAddressZipCode\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressZipCode\"]:contains(\"$zip\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressPhoneNumber\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the phone number",
-                "title": "Fill Phone Number"
-            },
-            "help": {
-                "message": "Having trouble filling the phone number?",
-                "title": "Trouble Filling Phone Number"
-            },
-            "isRequired": true,
-            "operation": {
-                "cardProperty": "phone",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"billingAddressPhoneNumber\"]",
-                "type": "fire_events"
-            },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressPhoneNumber\"]:contains(\"$phone\")"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "button[data-testid=\"icf-credit-card-edit\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Clicking the Save button",
-                "title": "Save Card Details"
-            },
             "isRequired": true,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "button[data-testid=\"icf-credit-card-edit\"]",
+                "selector": "label[data-testid=\"use-case-0\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid=\"use-case-continue\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"use-case-continue\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"payment-option\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "input[name=\"payment-option\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid=\"icf-options-submit\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"icf-options-submit\"]",
                 "type": "fire_events"
             }
         }

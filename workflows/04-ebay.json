@@ -144,6 +144,230 @@
                 "selector": "button[data-testid=\"icf-options-submit\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"creditCardNumber\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Filling in the card number",
+                "title": "Fill Card Number"
+            },
+            "help": {
+                "message": "Having trouble filling the card number?",
+                "title": "Trouble Filling Card Number"
+            },
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"creditCardNumber\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"creditCardNumber\"]:contains(\"$cardNumber\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"expirationDate\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Filling in the expiration date",
+                "title": "Fill Expiration Date"
+            },
+            "help": {
+                "message": "Having trouble filling the expiration date? Please ensure it is in MM/YY format.",
+                "title": "Trouble Filling Expiration Date"
+            },
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "cardExpirationDate",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"expirationDate\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"expirationDate\"]:contains(\"$cardExpirationDate\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"securityCode\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Filling in the security code",
+                "title": "Fill Security Code"
+            },
+            "help": {
+                "message": "Having trouble filling the security code? This is usually a 3 or 4 digit number on your card.",
+                "title": "Trouble Filling Security Code"
+            },
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"securityCode\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"securityCode\"]:contains(\"$cardCvc\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"firstName\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Filling in the first name",
+                "title": "Fill First Name"
+            },
+            "help": {
+                "message": "Having trouble filling the first name?",
+                "title": "Trouble Filling First Name"
+            },
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "firstName",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"firstName\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"firstName\"]:contains(\"$firstName\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"lastName\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Filling in the last name",
+                "title": "Fill Last Name"
+            },
+            "help": {
+                "message": "Having trouble filling the last name?",
+                "title": "Trouble Filling Last Name"
+            },
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "lastName",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"lastName\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"lastName\"]:contains(\"$lastName\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid=\"icf-credit-card-add\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking the Add button",
+                "title": "Add Card"
+            },
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"icf-credit-card-add\"]",
+                "type": "fire_events"
+            }
         }
     ],
     "testing": true,

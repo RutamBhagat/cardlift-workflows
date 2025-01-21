@@ -1,0 +1,252 @@
+{
+    "approvedAt": "2025-01-01T04:24:50.577Z",
+    "approvedBy": {
+        "createdAt": "2024-07-12T03:56:43.895Z",
+        "id": "455911c8-8d75-4b9f-8c8b-b323da5dff01",
+        "password": ">KAL3iBfyjQYeZTu2.Z2",
+        "role": "ADMIN",
+        "updatedAt": "2024-07-12T03:56:43.895Z",
+        "username": "michael"
+    },
+    "approvedById": "455911c8-8d75-4b9f-8c8b-b323da5dff01",
+    "category": "subscriptions",
+    "createdAt": "2025-01-01T04:24:04.620Z",
+    "createdBy": {
+        "createdAt": "2024-07-12T03:56:43.895Z",
+        "id": "455911c8-8d75-4b9f-8c8b-b323da5dff01",
+        "password": ">KAL3iBfyjQYeZTu2.Z2",
+        "role": "ADMIN",
+        "updatedAt": "2024-07-12T03:56:43.895Z",
+        "username": "michael"
+    },
+    "createdById": "455911c8-8d75-4b9f-8c8b-b323da5dff01",
+    "enabled": false,
+    "enabledAt": "2025-01-01T04:24:49.200Z",
+    "historyDetectionUrl": "",
+    "hostname": "netflix.com",
+    "id": "22fa79cf-65bf-4ea5-95fa-93499d8d99f5",
+    "name": "Netflix",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.netflix.com/account"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.netflix.com/login"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please sign in to your Netflix account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.netflix.com/account"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "linked",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.netflix.com/account"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[data-cl-view=\"editPayment\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a[data-cl-view=\"editPayment\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-uia=\"wallet-add-mop-action\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-uia=\"wallet-add-mop-action\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button#creditOrDebitCardDisplayStringId"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button#creditOrDebitCardDisplayStringId",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete=\"cc-number\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "type": "autofill_card_data"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-uia=\"action-submit-payment\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-uia=\"action-submit-payment\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.netflix.com/simplemember/otpPhoneEntry"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please help confirm your account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.netflix.com/simplemember/managepaymentinfo"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "linked",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:not(:has(span:textEquals(\"Preferred\"))) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate"
+        }
+    ],
+    "testing": false,
+    "type": "CONSUMER"
+}

@@ -374,15 +374,15 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.option__info h4.info__title span:contains(\"ending in $cardNumber\")"
+                            "sizzleSelector": "section[data-test-id=\"wallet-notification\"] div.page-notice__main p span:contains(\"$cardNumber\")"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
             "info": {
-                "message": "Verifying the card is present in the list",
-                "title": "Verify Card"
+                "message": "Verifying the card was added successfully",
+                "title": "Verify Card Added"
             },
             "isRequired": true
         }

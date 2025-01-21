@@ -21,7 +21,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.ebay.com/"
+                "url": "https://ppcapp.ebay.com/myppc/wallet/list"
             }
         },
         {
@@ -52,11 +52,35 @@
                 "successConditional": [
                     {
                         "urlSelectors": [
-                            "https://www.ebay.com/"
+                            "https://ppcapp.ebay.com/myppc/wallet/list"
                         ]
                     }
                 ],
                 "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "section.payment-options button[data-testid=\"icf-credit-card\"]:first"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Clicking on the Edit button for the first card",
+                "title": "Edit First Card"
+            },
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "section.payment-options button[data-testid=\"icf-credit-card\"]:first",
+                "type": "fire_events"
             }
         }
     ],

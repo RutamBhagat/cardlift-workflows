@@ -368,6 +368,23 @@
                 "selector": "button[data-testid=\"icf-credit-card-add\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.option__info h4.info__title span:contains(\"ending in $cardNumber\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "info": {
+                "message": "Verifying the card is present in the list",
+                "title": "Verify Card"
+            },
+            "isRequired": true
         }
     ],
     "testing": true,

@@ -28,21 +28,7 @@
             "conditional": [
                 {
                     "urlSelectors": [
-                        "https://signin.ebay.com/signin/"
-                    ]
-                },
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "h1[id=\"greeting-msg\"]:contains(\"Sign in to your account\")"
-                        }
-                    ]
-                },
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "h1[id=\"welcome-msg\"]:contains(\"Welcome back\")"
-                        }
+                        "https://signin.ebay.com"
                     ]
                 }
             ],
@@ -238,33 +224,6 @@
                     "input"
                 ],
                 "selector": "input[id=\"billingAddressLine1\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressLine2\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "info": {
-                "message": "Filling in the optional street address line 2",
-                "title": "Fill Street Address Line 2 (Optional)"
-            },
-            "isRequired": false,
-            "operation": {
-                "cardProperty": "address2",
-                "events": [
-                    "click",
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[id=\"billingAddressLine2\"]",
                 "type": "fire_events"
             }
         },

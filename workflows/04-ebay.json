@@ -56,7 +56,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -76,7 +76,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -96,7 +96,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -116,7 +116,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -136,7 +136,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -156,7 +156,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -179,7 +179,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardExpirationDate",
                 "events": [
@@ -202,7 +202,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [
@@ -225,7 +225,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "firstName",
                 "events": [
@@ -248,7 +248,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "lastName",
                 "events": [
@@ -290,7 +290,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "countryFull",
                 "events": [
@@ -313,7 +313,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "address",
                 "events": [
@@ -336,7 +336,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "city",
                 "events": [
@@ -359,7 +359,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "stateFull",
                 "events": [
@@ -382,7 +382,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "zip",
                 "events": [
@@ -405,7 +405,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "phone",
                 "events": [
@@ -428,7 +428,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"

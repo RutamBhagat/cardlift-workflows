@@ -310,6 +310,217 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "section.billing-address span.address-summary__action button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "section.billing-address span.address-summary__action button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"billingAddressCountry\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "countryFull",
+                "events": [
+                    "click",
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[id=\"billingAddressCountry\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"billingAddressCountry\"] option[selected]:contains(\"$countryFull\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressLine1\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"billingAddressLine1\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressLine1\"]:contains(\"$address\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressCity\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"billingAddressCity\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressCity\"]:contains(\"$city\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"billingAddressState\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "stateFull",
+                "events": [
+                    "click",
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[id=\"billingAddressState\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[id=\"billingAddressState\"] option[selected]:contains(\"$stateFull\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressZipCode\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"billingAddressZipCode\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressZipCode\"]:contains(\"$zip\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressPhoneNumber\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "cardProperty": "phone",
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"billingAddressPhoneNumber\"]",
+                "type": "fire_events"
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressPhoneNumber\"]:contains(\"$phone\")"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "button[data-testid=\"icf-credit-card-add\"]"
                         }
                     ]

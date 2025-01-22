@@ -76,55 +76,7 @@
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "cardNumber",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[autocomplete=\"cc-number\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[autocomplete=\"cc-exp\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "cardExpirationDate",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[autocomplete=\"cc-exp\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[autocomplete=\"cc-name\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "name",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[autocomplete=\"cc-name\"]",
-                "type": "fire_events"
+                "type": "autofill_card_data"
             }
         },
         {

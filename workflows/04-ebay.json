@@ -70,6 +70,26 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "button[data-testid=\"new-option-mobile\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": false,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid=\"new-option-mobile\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "label[data-testid=\"use-case-0\"]"
                         }
                     ]

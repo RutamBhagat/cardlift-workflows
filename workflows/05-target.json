@@ -359,6 +359,9 @@
                         {
                             "sizzleSelector": "[data-test^='listCardContainer-']:has(span:contains('$cardNumber'))[data-test^='listCardContainer-']:has(span[data-test='defaultPill'])"
                         }
+                    ],
+                    "urlSelectors": [
+                        "https://www.target.com/account/payments"
                     ]
                 }
             ],

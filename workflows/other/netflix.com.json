@@ -239,12 +239,13 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": ".wallet--list > div[data-uia=\"wallet-item\"]:first-child [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
                         }
                     ]
                 }
             ],
-            "executionType": "separate"
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": false,

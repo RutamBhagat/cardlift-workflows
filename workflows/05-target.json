@@ -34,7 +34,7 @@
             ],
             "executionType": "separate",
             "operation": {
-                "message": "Please sign in to your Figma account.",
+                "message": "Please sign in to your Target account.",
                 "successConditional": [
                     {
                         "urlSelectors": [
@@ -357,19 +357,13 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "button[data-test=\"submitAddCreditCard\"]"
+                            "sizzleSelector": "[data-test^='listCardContainer-']:has(span:contains('$cardNumber'))[data-test^='listCardContainer-']:has(span[data-test='defaultPill'])"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "button[data-test=\"submitAddCreditCard\"]",
-                "type": "fire_events"
-            }
+            "isRequired": true
         }
     ],
     "testing": true,

@@ -343,13 +343,17 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[id=\"billingAddressCity\"]"
+                            "sizzleSelector": "input[id=\"billingAddressCity\"]",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "isRequired": false,
+            "isRequired": true,
             "operation": {
                 "cardProperty": "city",
                 "events": [
@@ -359,19 +363,7 @@
                 "selector": "input[id=\"billingAddressCity\"]",
                 "type": "fire_events"
             },
-            "retryConditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[id=\"billingAddressCity\"]",
-                            "valueMatches": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "retryConditional": []
         },
         {
             "conditional": [

@@ -239,7 +239,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": "[data-uia=\"backup-mop-wallet-list\"] > div[data-uia=\"wallet-item\"]:first-child [data-uia=\"wallet-item-details\"] [data-uia=\"mopType\"]:contains($cardNumber)"
                         }
                     ]
                 }

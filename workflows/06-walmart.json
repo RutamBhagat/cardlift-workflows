@@ -46,22 +46,40 @@
             }
         },
         {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[type='button']:textEquals('Add new payment method')"
+                        }
+                    ]
+                }
+            ],
             "executionType": "separate",
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "h2:textEquals(\"Payment methods (1)\") + div button",
+                "selector": "button[type='button']:textEquals('Add new payment method')",
                 "type": "fire_events"
             }
         },
         {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[data-testid='ALLCC'] button"
+                        }
+                    ]
+                }
+            ],
             "executionType": "separate",
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "[data-testid=\"ALLCC\"]",
+                "selector": "div[data-testid='ALLCC'] button",
                 "type": "fire_events"
             }
         },

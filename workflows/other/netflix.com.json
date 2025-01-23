@@ -211,6 +211,25 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "branch",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "[data-uia=\"wallet-item\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")"
                         }
                     ]

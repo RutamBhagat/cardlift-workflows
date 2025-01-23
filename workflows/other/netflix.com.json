@@ -228,7 +228,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item\"]:not(:has(span:textEquals(\"Preferred\"))) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:not(:has(span:textEquals(\"Preferred\"))) [data-uia=\"wallet-item\"]:contains($cardNumber)"
                         }
                     ]
                 }
@@ -239,14 +239,14 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": ".wallet--list > div[data-uia=\"wallet-item\"]:first-child [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": ".wallet--list > div[data-uia=\"wallet-item\"]:first-child [data-uia=\"wallet-item\"]:contains($cardNumber)"
                         }
                     ]
                 },
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item\"]:contains($cardNumber)"
                         }
                     ]
                 }

@@ -84,6 +84,180 @@
             }
         },
         {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete='cc-number']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "ignoreFailure": true,
+                "selector": "input[autocomplete='cc-number']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete='cc-given-name']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "firstName",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "ignoreFailure": true,
+                "selector": "input[autocomplete='cc-given-name']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete='cc-family-name']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "lastName",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "ignoreFailure": true,
+                "selector": "input[autocomplete='cc-family-name']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[autocomplete='cc-exp-month']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationMonth",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "ignoreFailure": true,
+                "selector": "select[autocomplete='cc-exp-month']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[autocomplete='cc-exp-year']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationYearShort",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "ignoreFailure": true,
+                "selector": "select[autocomplete='cc-exp-year']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete='cc-csc']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "ignoreFailure": true,
+                "selector": "input[autocomplete='cc-csc']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete='tel-national']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "phone",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "ignoreFailure": true,
+                "selector": "input[autocomplete='tel-national']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button:textEquals('Add new address')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "ignoreFailure": true,
+                "selector": "button:textEquals('Add new address')",
+                "type": "fire_events"
+            }
+        },
+        {
             "executionType": "separate"
         }
     ],

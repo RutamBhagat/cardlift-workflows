@@ -51,7 +51,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "button[type=\"button\"]:textEquals(\"Add new payment method\")",
+                "selector": "h2:textEquals(\"Payment methods (1)\") + div button",
                 "type": "fire_events"
             }
         },

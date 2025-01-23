@@ -180,7 +180,6 @@
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -203,7 +202,6 @@
             "operation": {
                 "cardProperty": "cardExpirationDate",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -226,7 +224,6 @@
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -249,7 +246,6 @@
             "operation": {
                 "cardProperty": "firstName",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -272,7 +268,6 @@
             "operation": {
                 "cardProperty": "lastName",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -314,7 +309,6 @@
             "operation": {
                 "cardProperty": "countryFull",
                 "events": [
-                    "click",
                     "selectInputData",
                     "change"
                 ],
@@ -337,7 +331,6 @@
             "operation": {
                 "cardProperty": "address",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -360,13 +353,25 @@
             "operation": {
                 "cardProperty": "city",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input[id=\"billingAddressCity\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"billingAddressCity\"]",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -383,7 +388,6 @@
             "operation": {
                 "cardProperty": "stateFull",
                 "events": [
-                    "click",
                     "selectInputData",
                     "change"
                 ],
@@ -406,7 +410,6 @@
             "operation": {
                 "cardProperty": "zip",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],
@@ -429,7 +432,6 @@
             "operation": {
                 "cardProperty": "phone",
                 "events": [
-                    "click",
                     "fillInputData",
                     "input"
                 ],

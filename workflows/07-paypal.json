@@ -1,0 +1,63 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "paypal.com",
+    "id": "",
+    "name": "Paypal",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.paypal.com/myaccount/money/cards/new/embeddable/manual"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.paypal.com/in/signin"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please sign in to your Paypal account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.paypal.com/myaccount/money/cards/new/embeddable/manual"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "watchedElementSelectors": [
+                        {
+                            "sizzleSelector": ""
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate"
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

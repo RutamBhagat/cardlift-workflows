@@ -192,7 +192,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg"
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg"
                         }
                     ]
                 }
@@ -202,7 +202,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg",
+                "selector": "[data-uia=\"wallet-item\"]:contains($cardNumber) [data-uia=\"menu-payment-options\"] > svg",
                 "type": "fire_events"
             }
         },
@@ -211,7 +211,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")"
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")"
                         }
                     ]
                 }
@@ -221,14 +221,14 @@
                 "events": [
                     "click"
                 ],
-                "selector": "[data-uia=\"wallet-item-details\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")",
+                "selector": "[data-uia=\"wallet-item\"]:contains($cardNumber) div:has(> div[data-uia*=\"wallet--action\"]):visible button:textEquals(\"Make Preferred\")",
                 "type": "fire_events"
             },
             "retryConditional": [
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item\"]:not(:has(span:textEquals(\"Preferred\"))) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:not(:has(span:textEquals(\"Preferred\"))) [data-uia=\"wallet-item\"]:contains($cardNumber)"
                         }
                     ]
                 }
@@ -239,14 +239,14 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": ".wallet--list > div[data-uia=\"wallet-item\"]:first-child [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": ".wallet--list > div[data-uia=\"wallet-item\"]:first-child [data-uia=\"wallet-item\"]:contains($cardNumber)"
                         }
                     ]
                 },
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item-details\"]:contains($cardNumber)"
+                            "sizzleSelector": "[data-uia=\"wallet-item\"]:has(span:textEquals(\"Preferred\")) [data-uia=\"wallet-item\"]:contains($cardNumber)"
                         }
                     ]
                 }

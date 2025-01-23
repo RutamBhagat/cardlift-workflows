@@ -46,11 +46,23 @@
             }
         },
         {
-            "executionType": "linked",
+            "executionType": "separate",
             "operation": {
-                "ignoreFailure": true,
-                "type": "navigate",
-                "url": "https://www.figma.com/files/team"
+                "events": [
+                    "click"
+                ],
+                "selector": "button[type=\"button\"]:textEquals(\"Add new payment method\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "[data-testid=\"ALLCC\"]",
+                "type": "fire_events"
             }
         },
         {

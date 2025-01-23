@@ -21,7 +21,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.target.com/account/payments/new"
+                "url": "https://www.target.com/account/payments"
             }
         },
         {
@@ -38,11 +38,30 @@
                 "successConditional": [
                     {
                         "urlSelectors": [
-                            "https://www.target.com/account/payments/new"
+                            "https://www.target.com/account/payments"
                         ]
                     }
                 ],
                 "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-test=\"addNewButton-payments\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-test=\"addNewButton-payments\"]",
+                "type": "fire_events"
             }
         },
         {
@@ -75,6 +94,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "type": "autofill_card_data"
             }

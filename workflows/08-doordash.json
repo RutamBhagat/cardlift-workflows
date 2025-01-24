@@ -97,6 +97,38 @@
                 "selector": "button[data-testid='AddCardButton']",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[data-anchor-id=\"CreditCardDetails\"]:contains(\"$cardNumber\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "[data-anchor-id=\"CreditCardDetails\"]:contains(\"$cardNumber\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[data-anchor-id=\"SavePaymentMethods\"] [data-anchor-id=\"PaymentMethodCard\"]:not(:has(button[aria-label=\"Delete\"])) [data-anchor-id=\"CreditCardDetails\"]:contains(\"$cardNumber\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": true,

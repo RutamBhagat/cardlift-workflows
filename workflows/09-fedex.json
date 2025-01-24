@@ -21,7 +21,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.fedex.com/secure-login/"
+                "url": "https://www.fedex.com/online/billing/cbs/summary"
             }
         },
         {
@@ -50,7 +50,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.fedex.com/hopec/manage/profiles"
+                "url": "https://www.fedex.com/online/billing/cbs/summary"
             }
         },
         {

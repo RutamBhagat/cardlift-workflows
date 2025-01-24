@@ -50,19 +50,21 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "[data-anchor-id=\"PaymentMethodAdd\"]"
+                            "sizzleSelector": "button[data-anchor-id=\"PaymentMethodAdd\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "[data-anchor-id=\"PaymentMethodAdd\"]",
+                "selector": "button[data-anchor-id=\"PaymentMethodAdd\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [
@@ -70,14 +72,25 @@
                     "elementSelectors": [
                         {
                             "sizzleSelector": "iframe[title='Secure card number input frame']"
+                        },
+                        {
+                            "sizzleSelector": "iframe[title=\"Secure card security code input frame\"]"
+                        },
+                        {
+                            "sizzleSelector": "iframe[title=\"Secure card expiration date input frame\"]"
+                        },
+                        {
+                            "sizzleSelector": "iframe[title=\"Secure text input frame\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": false,
             "operation": {
                 "type": "autofill_card_data"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [

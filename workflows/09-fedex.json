@@ -132,6 +132,254 @@
         {
             "conditional": [
                 {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#ccName"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#ccName",
+                "type": "fire_events",
+                "cardProperty": "name"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#ccNumber"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#ccNumber",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select#expMonth"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationMonth",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select#expMonth",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select#expYear"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationYear",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select#expYear",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#cvv"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#cvv",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#address1"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#address1",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#address2"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address2",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#address2",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#city"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#city",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select#state"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "state",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select#state",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#postalCode"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input#postalCode",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input#ack_input"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "input#ack_input",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button#update_profile_button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button#update_profile_button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
                     "watchedElementSelectors": [
                         {
                             "sizzleSelector": ""

@@ -38,7 +38,7 @@
                 "successConditional": [
                     {
                         "urlSelectors": [
-                            "https://www.fedex.com/global/choose-location.html"
+                            "https://www.fedex.com/online/billing/cbs/summary"
                         ]
                     }
                 ],
@@ -51,6 +51,82 @@
                 "ignoreFailure": true,
                 "type": "navigate",
                 "url": "https://www.fedex.com/online/billing/cbs/summary"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a.fdx-c-button.fdx-c-button--text:contains('Cancel')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a.fdx-c-button.fdx-c-button--text:contains('Cancel')",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "span.fdx-c-icon-bar__list__item__button__text:textEquals('Manage Payments')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "span.fdx-c-icon-bar__list__item__button__text:textEquals('Manage Payments')",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button.fdx-c-icon-bar__list-sub__item__button:textEquals(' Payment Profiles ')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button.fdx-c-icon-bar__list-sub__item__button:textEquals(' Payment Profiles ')",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button#edit_profile_button span:textEquals('edit')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button#edit_profile_button span:textEquals('edit')",
+                "type": "fire_events"
             }
         },
         {

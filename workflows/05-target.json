@@ -21,14 +21,52 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace=ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default=false&actions=create_session_signin"
+                "url": "https://www.target.com"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[aria-label=\"Account, sign in\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a[id=\"account-sign-in\"] span:contains(\"Sign in\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-test=\"accountNav-signIn\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-test=\"accountNav-signIn\"]",
+                "type": "fire_events"
             }
         },
         {
             "conditional": [
                 {
                     "urlSelectors": [
-                        "https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace=ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default=false&actions=create_session_signin"
+                        "https://www.target.com/login"
                     ]
                 }
             ],
@@ -38,7 +76,7 @@
                 "successConditional": [
                     {
                         "urlSelectors": [
-                            "https://www.target.com/"
+                            "https://www.target.com/random"
                         ]
                     }
                 ],
@@ -48,9 +86,12 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://www.target.com/"
-                    ]
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[id=\"account-sign-in\"] span:not(:contains(\"Sign in\"))"
+                        }
+                    ],
+                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",

@@ -65,9 +65,12 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://www.target.com/login"
-                    ]
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[id=\"login\"]"
+                        }
+                    ],
+                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",

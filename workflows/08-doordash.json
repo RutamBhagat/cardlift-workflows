@@ -46,11 +46,19 @@
             }
         },
         {
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.doordash.com/consumer/payment"
+            }
+        },
+        {
             "conditional": [
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "button[data-anchor-id=\"PaymentMethodAdd\"]"
+                            "sizzleSelector": "button[data-anchor-id=\"PaymentMethodAdd\"] span:textEquals(\"Credit/Debit Card\")"
                         }
                     ]
                 }
@@ -61,7 +69,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "button[data-anchor-id=\"PaymentMethodAdd\"]",
+                "selector": "button[data-anchor-id=\"PaymentMethodAdd\"] span:textEquals(\"Credit/Debit Card\")",
                 "type": "fire_events"
             },
             "retryConditional": []
@@ -90,7 +98,19 @@
             "operation": {
                 "type": "autofill_card_data"
             },
-            "retryConditional": []
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[autocomplete=\"postal-code\"]",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -128,7 +148,8 @@
                 ],
                 "selector": "[data-anchor-id=\"CreditCardDetails\"]:contains(\"$cardNumber\")",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [

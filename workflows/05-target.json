@@ -21,56 +21,15 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.target.com"
+                "url": "https://www.target.com/account/payments"
             }
         },
         {
             "conditional": [
                 {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "a[aria-label=\"Account, sign in\"]"
-                        }
+                    "urlSelectors": [
+                        "https://www.target.com/login"
                     ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "a[aria-label=\"Account, sign in\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "button[data-test=\"accountNav-signIn\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "button[data-test=\"accountNav-signIn\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "button[id=\"login\"]"
-                        }
-                    ],
-                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",
@@ -78,10 +37,8 @@
                 "message": "Please sign in to your Target account.",
                 "successConditional": [
                     {
-                        "elementSelectors": [
-                            {
-                                "sizzleSelector": "a[id=\"account-sign-in\"]"
-                            }
+                        "urlSelectors": [
+                            "https://www.target.com/account/payments"
                         ]
                     }
                 ],
@@ -93,65 +50,10 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"account-sign-in\"]"
-                        }
-                    ],
-                    "urlSelectors": []
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "a[id=\"account-sign-in\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "span:contains(\"Manage account\")"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "span:contains(\"Manage account\")",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "a[href=\"/account/payments\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "a[href=\"/account/payments\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
                             "sizzleSelector": "button[data-test=\"addNewButton-payments\"]"
+                        },
+                        {
+                            "sizzleSelector": "a[id=\"account-sign-in\"] span:not(:contains(\"Sign in\"))"
                         }
                     ]
                 }

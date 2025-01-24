@@ -67,6 +67,116 @@
         {
             "conditional": [
                 {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "iframe[title='Secure card number input frame']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "type": "autofill_card_data"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "iframe[title='Secure card security code input frame']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name='vgs-collect-cvv-field']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "iframe[title='Secure card expiration date input frame']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationDate",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[placeholder='MM / YY']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "iframe[title='Secure text input frame']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[placeholder='Zip Code']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[data-testid='AddCardButton']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[data-testid='AddCardButton']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div:contains(\"successfully added\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true
+        },
+        {
+            "conditional": [
+                {
                     "watchedElementSelectors": [
                         {
                             "sizzleSelector": ""

@@ -1,0 +1,71 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "fedex.com",
+    "id": "",
+    "name": "Fedex",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.fedex.com/secure-login/"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.fedex.com/secure-login/"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please sign in to your Fedex account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.fedex.com/global/choose-location.html"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "linked",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.fedex.com/hopec/manage/profiles"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "watchedElementSelectors": [
+                        {
+                            "sizzleSelector": ""
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate"
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

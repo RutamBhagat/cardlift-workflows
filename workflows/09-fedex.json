@@ -77,7 +77,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "span.fdx-c-icon-bar__list__item__button__text:textEquals('Manage Payments')"
+                            "sizzleSelector": "span:textEquals('Manage Payments')"
                         }
                     ]
                 }
@@ -87,7 +87,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "span.fdx-c-icon-bar__list__item__button__text:textEquals('Manage Payments')",
+                "selector": "span:textEquals('Manage Payments')",
                 "type": "fire_events"
             }
         },
@@ -96,7 +96,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "button.fdx-c-icon-bar__list-sub__item__button:textEquals(' Payment Profiles ')"
+                            "sizzleSelector": "button:textEquals(' Payment Profiles ')"
                         }
                     ]
                 }
@@ -106,7 +106,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "button.fdx-c-icon-bar__list-sub__item__button:textEquals(' Payment Profiles ')",
+                "selector": "button:textEquals(' Payment Profiles ')",
                 "type": "fire_events"
             }
         },
@@ -141,13 +141,13 @@
             ],
             "executionType": "separate",
             "operation": {
+                "cardProperty": "name",
                 "events": [
                     "fillInputData",
                     "input"
                 ],
                 "selector": "input#ccName",
-                "type": "fire_events",
-                "cardProperty": "name"
+                "type": "fire_events"
             }
         },
         {

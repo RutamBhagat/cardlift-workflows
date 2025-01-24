@@ -46,6 +46,14 @@
             }
         },
         {
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.target.com/account/payments"
+            }
+        },
+        {
             "conditional": [
                 {
                     "elementSelectors": [

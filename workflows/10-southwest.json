@@ -1,0 +1,71 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "southwest.com",
+    "id": "",
+    "name": "Southwest",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.southwest.com/flight/login/"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.southwest.com/flight/login/"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please sign in to your Southwest account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.southwest.com/loyalty/myaccount"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "linked",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.southwest.com/"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "watchedElementSelectors": [
+                        {
+                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate"
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

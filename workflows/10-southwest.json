@@ -27,9 +27,12 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://www.southwest.com/flight/login/"
-                    ]
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button:contains('Log in')"
+                        }
+                    ],
+                    "urlSelectors": []
                 }
             ],
             "executionType": "separate",
@@ -37,14 +40,12 @@
                 "message": "Please sign in to your Southwest account.",
                 "successConditional": [
                     {
-                        "urlSelectors": [
-                            "https://www.southwest.com/loyalty/myaccount"
-                        ]
-                    },
-                    {
-                        "urlSelectors": [
-                            "https://www.southwest.com/loyalty/myaccount/payment"
-                        ]
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "[id=\"payment-preferences-card\"]"
+                            }
+                        ],
+                        "watchedElementSelectors": []
                     }
                 ],
                 "type": "await_user_help"

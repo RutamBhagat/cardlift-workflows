@@ -42,7 +42,7 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "[id=\"payment-preferences-card\"]"
+                                "sizzleSelector": "button:textEquals('Add a new card')"
                             }
                         ],
                         "watchedElementSelectors": []

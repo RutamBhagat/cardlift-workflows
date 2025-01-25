@@ -361,14 +361,15 @@
         {
             "conditional": [
                 {
-                    "watchedElementSelectors": [
+                    "elementSelectors": [
                         {
-                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
+                            "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
                         }
                     ]
                 }
             ],
-            "executionType": "separate"
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": true,

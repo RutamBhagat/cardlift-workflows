@@ -1,0 +1,109 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "delta.com",
+    "id": "",
+    "name": "Delta",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.delta.com/myprofile/personal-details"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.delta.com/skymiles/login"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please sign in to your Delta account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.delta.com/myprofile/personal-details"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "linked",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.delta.com/myprofile/personal-details"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a:contains(\"Payment Methods\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a:contains(\"Payment Methods\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[class=\"addPayment_methods_link\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a[class=\"addPayment_methods_link\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "watchedElementSelectors": [
+                        {
+                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate"
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

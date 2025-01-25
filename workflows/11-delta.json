@@ -94,6 +94,273 @@
         {
             "conditional": [
                 {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"paymentCardNickName\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "nickname",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"paymentCardNickName\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"paymentCardNum\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"paymentCardNum\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"expirationDate\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationDate",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"expirationDate\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"nameOnCard\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "name",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"nameOnCard\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[formcontrolname=\"countryCode\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "countryFull",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[formcontrolname=\"countryCode\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"addressLine1Text\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"addressLine1Text\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"addressLine2Text\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address2",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"addressLine2Text\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"cityLocalityName\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"cityLocalityName\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "select[formcontrolname=\"countrySubdivisionCode\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "state",
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
+                "selector": "select[formcontrolname=\"countrySubdivisionCode\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"postalCode\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[formcontrolname=\"postalCode\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"isConsentChecked\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "input[formcontrolname=\"isConsentChecked\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[formcontrolname=\"isPrimaryChecked\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "input[formcontrolname=\"isPrimaryChecked\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button.idp-primary:textEquals(\"Save Payment methods\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button.idp-primary:textEquals(\"Save Payment methods\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
                     "watchedElementSelectors": [
                         {
                             "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"

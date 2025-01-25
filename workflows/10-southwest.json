@@ -82,19 +82,29 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name='setPrimary']"
+                            "sizzleSelector": "div[aria-checked='false'][role='checkbox']"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
                 ],
                 "selector": "div[aria-checked='false'][role='checkbox']",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[aria-checked='false'][role='checkbox']"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
@@ -383,14 +393,15 @@
         {
             "conditional": [
                 {
-                    "watchedElementSelectors": [
+                    "elementSelectors": [
                         {
-                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
+                            "sizzleSelector": "div[id='payment-preferences-card'] div:first-child h3:contains($cardNumber) + div:textEquals('Primary')"
                         }
                     ]
                 }
             ],
-            "executionType": "separate"
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": true,

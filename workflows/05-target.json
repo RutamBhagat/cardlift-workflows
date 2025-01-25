@@ -53,7 +53,7 @@
                             "sizzleSelector": "button[data-test=\"addNewButton-payments\"]"
                         },
                         {
-                            "sizzleSelector": "a[id=\"account-sign-in\"] span:not(:contains(\"Sign in\"))"
+                            "sizzleSelector": "a[id=\"account-sign-in\"] span:contains(\"$firstName\")"
                         }
                     ]
                 }

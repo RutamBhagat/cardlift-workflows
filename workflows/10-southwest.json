@@ -21,7 +21,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.southwest.com/flight/login/"
+                "url": "https://www.southwest.com/loyalty/myaccount/payment"
             }
         },
         {
@@ -40,6 +40,11 @@
                         "urlSelectors": [
                             "https://www.southwest.com/loyalty/myaccount"
                         ]
+                    },
+                    {
+                        "urlSelectors": [
+                            "https://www.southwest.com/loyalty/myaccount/payment"
+                        ]
                     }
                 ],
                 "type": "await_user_help"
@@ -50,7 +55,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://www.southwest.com/"
+                "url": "https://www.southwest.com/loyalty/myaccount/payment"
             }
         },
         {

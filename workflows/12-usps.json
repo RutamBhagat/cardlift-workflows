@@ -177,14 +177,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "We're having trouble deleting the existing card.",
-                "title": "Trouble Deleting Card"
-            },
-            "info": {
-                "message": "We are removing an existing card",
-                "title": "Removing Card"
-            },
             "operation": {
                 "events": [
                     "click"

@@ -25,6 +25,14 @@
             }
         },
         {
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://reg.usps.com/informeddelivery/login"
+            }
+        },
+        {
             "conditional": [
                 {
                     "urlSelectors": [
@@ -75,6 +83,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "We're having trouble deleting the existing card.",
+                "title": "Trouble Deleting Card"
+            },
+            "info": {
+                "message": "We are removing an existing card",
+                "title": "Removing Card"
+            },
             "operation": {
                 "events": [
                     "click"
@@ -94,6 +110,41 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the add new card button.",
+                "title": "Trouble Adding New Card"
+            },
+            "info": {
+                "message": "We are adding a new card to your account",
+                "title": "Adding New Card"
+            },
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a[id=\"stored-card-add-btn\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]:visible"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble deleting the existing card.",
+                "title": "Trouble Deleting Card"
+            },
+            "info": {
+                "message": "We are removing an existing card",
+                "title": "Removing Card"
+            },
             "operation": {
                 "events": [
                     "click"

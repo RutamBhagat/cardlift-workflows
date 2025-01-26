@@ -21,7 +21,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://pay.usps.com/pay/manageAccounts.html"
+                "url": "https://reg.usps.com/informeddelivery/login"
             }
         },
         {
@@ -38,7 +38,7 @@
                 "successConditional": [
                     {
                         "urlSelectors": [
-                            "https://pay.usps.com/pay/manageAccounts.html"
+                            "https://store.usps.com/store/myaccount/profile.jsp"
                         ]
                     }
                 ],
@@ -46,11 +46,22 @@
             }
         },
         {
-            "executionType": "linked",
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[title=\"Stored Payment Info\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
             "operation": {
-                "ignoreFailure": true,
-                "type": "navigate",
-                "url": "https://pay.usps.com/pay/manageAccounts.html"
+                "events": [
+                    "click"
+                ],
+                "selector": "a[title=\"Stored Payment Info\"]",
+                "type": "fire_events"
             }
         },
         {

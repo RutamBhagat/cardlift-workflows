@@ -98,7 +98,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"deleteLink3\"]"
+                            "sizzleSelector": "a[id=\"deleteLink1\"]"
                         }
                     ]
                 }
@@ -112,12 +112,12 @@
                 "message": "We are removing an existing card",
                 "title": "Removing Card"
             },
-            "isRequired": false,
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "a[id=\"deleteLink3\"]",
+                "selector": "a[id=\"deleteLink1\"]",
                 "type": "fire_events"
             },
             "retryConditional": []

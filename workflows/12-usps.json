@@ -25,14 +25,6 @@
             }
         },
         {
-            "executionType": "separate",
-            "operation": {
-                "ignoreFailure": true,
-                "type": "navigate",
-                "url": "https://reg.usps.com/informeddelivery/login"
-            }
-        },
-        {
             "conditional": [
                 {
                     "urlSelectors": [
@@ -53,6 +45,11 @@
                         "urlSelectors": [
                             "https://reg.usps.com/entreg/secure/InformedDeliveryValidateAction_input"
                         ]
+                    },
+                    {
+                        "urlSelectors": [
+                            "https://pay.usps.com/pay/manageAccounts.html"
+                        ]
                     }
                 ],
                 "type": "await_user_help"
@@ -70,7 +67,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://store.usps.com/store/myaccount/profile.jsp"
+                "url": "https://pay.usps.com/pay/manageAccounts.html"
             }
         },
         {
@@ -78,26 +75,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[title=\"Stored Payment Info\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "a[title=\"Stored Payment Info\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "div#sa3 a.delete-saved-card"
+                            "sizzleSelector": "a[id=\"deleteLink3\"]"
                         }
                     ]
                 }
@@ -111,14 +89,15 @@
                 "message": "We are removing an existing card",
                 "title": "Removing Card"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "div#sa3 a.delete-saved-card",
+                "selector": "a[id=\"deleteLink3\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [
@@ -130,7 +109,7 @@
                     ]
                 }
             ],
-            "executionType": "linked",
+            "executionType": "separate",
             "operation": {
                 "events": [
                     "click"

@@ -45,11 +45,6 @@
                         "urlSelectors": [
                             "https://reg.usps.com/entreg/secure/InformedDeliveryValidateAction_input"
                         ]
-                    },
-                    {
-                        "urlSelectors": [
-                            "https://pay.usps.com/pay/manageAccounts.html"
-                        ]
                     }
                 ],
                 "type": "await_user_help"
@@ -67,22 +62,35 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://pay.usps.com/pay/manageAccounts.html"
+                "url": "https://store.usps.com/store/myaccount/profile.jsp"
+            }
+        },
+        {
+            "conditional": [],
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://store.usps.com/store/myaccount/profile.jsp"
             }
         },
         {
             "conditional": [
                 {
-                    "urlSelectors": [
-                        "https://store.usps.com/store/myaccount/profile.jsp"
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[title=\"Stored Payment Info\"]"
+                        }
                     ]
                 }
             ],
             "executionType": "separate",
             "operation": {
-                "ignoreFailure": true,
-                "type": "navigate",
-                "url": "https://pay.usps.com/pay/manageAccounts.html"
+                "events": [
+                    "click"
+                ],
+                "selector": "a[title=\"Stored Payment Info\"]",
+                "type": "fire_events"
             }
         },
         {

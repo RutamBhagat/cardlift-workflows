@@ -77,7 +77,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div#sa3 a.delete-saved-card"
+                            "sizzleSelector": "div#sa1 a.delete-saved-card"
                         }
                     ]
                 }
@@ -91,11 +91,31 @@
                 "message": "We are removing an existing card",
                 "title": "Removing Card"
             },
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "div#sa3 a.delete-saved-card",
+                "selector": "div#sa1 a.delete-saved-card",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "a[id=\"delete-card-confirmation\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "linked",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "a[id=\"delete-card-confirmation\"]",
                 "type": "fire_events"
             }
         },
@@ -122,7 +142,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a[id=\"stored-card-add-btn\"]",
+                "selector": "a[id=\"stored-card-add-btn\"]:visible",
                 "type": "fire_events"
             }
         },

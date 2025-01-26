@@ -65,7 +65,9 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["click"],
+                "events": [
+                    "click"
+                ],
                 "selector": "a[id=\"stored-card-add-btn\"]",
                 "type": "fire_events"
             }
@@ -83,7 +85,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "name",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"card-holder-name\"]",
                 "type": "fire_events"
             }
@@ -101,7 +106,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "nickname",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"card-nickname\"]",
                 "type": "fire_events"
             }
@@ -120,7 +128,11 @@
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
-                "events": ["click", "fillInputData", "input"],
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"accountNumber\"]",
                 "type": "fire_events"
             }
@@ -138,7 +150,11 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "cardCvc",
-                "events": ["click", "fillInputData", "input"],
+                "events": [
+                    "click",
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"cvv\"]",
                 "type": "fire_events"
             }
@@ -156,7 +172,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "cardExpirationDate",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"card-expire-date\"]",
                 "type": "fire_events"
             }
@@ -173,7 +192,9 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["click"],
+                "events": [
+                    "click"
+                ],
                 "selector": "input[id=\"m-make-this-my-preferred-card-checkbox\"]",
                 "type": "fire_events"
             }
@@ -191,8 +212,11 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "address",
-                "events": ["fillInputData", "input"],
-                "selector": "input[id=\"street-address\"]", 
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[id=\"street-address\"]",
                 "type": "fire_events"
             }
         },
@@ -209,7 +233,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "address2",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"apt-suite-address\"]",
                 "type": "fire_events"
             }
@@ -224,10 +251,13 @@
                     ]
                 }
             ],
-            "executionType": "separate", 
+            "executionType": "separate",
             "operation": {
                 "cardProperty": "city",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"city-address\"]",
                 "type": "fire_events"
             }
@@ -245,7 +275,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "state",
-                "events": ["selectInputData", "change"],
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
                 "selector": "select[id=\"state-address\"]",
                 "type": "fire_events"
             }
@@ -263,7 +296,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "zip",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[id=\"zipcode-address\"]",
                 "type": "fire_events"
             }
@@ -280,7 +316,9 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["click"],
+                "events": [
+                    "click"
+                ],
                 "selector": "input[id=\"agree-to-terms\"]",
                 "type": "fire_events"
             }
@@ -297,7 +335,9 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["click"],
+                "events": [
+                    "click"
+                ],
                 "selector": "a[id=\"savebtn\"]",
                 "type": "fire_events"
             }

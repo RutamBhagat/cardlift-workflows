@@ -52,18 +52,6 @@
                 "type": "navigate",
                 "url": "https://pay.usps.com/pay/manageAccounts.html"
             }
-        },
-        {
-            "conditional": [
-                {
-                    "watchedElementSelectors": [
-                        {
-                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate"
         }
     ],
     "testing": true,

@@ -73,6 +73,21 @@
         {
             "conditional": [
                 {
+                    "urlSelectors": [
+                        "https://store.usps.com/store/myaccount/profile.jsp"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://pay.usps.com/pay/manageAccounts.html"
+            }
+        },
+        {
+            "conditional": [
+                {
                     "elementSelectors": [
                         {
                             "sizzleSelector": "a[id=\"deleteLink3\"]"

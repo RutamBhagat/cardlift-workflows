@@ -69,7 +69,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": ".list-of-saved-cards .card-input-field-container:nth-child(3) a.delete-saved-card"
+                            "sizzleSelector": "div#sa3 a.delete-saved-card"
                         }
                     ]
                 }
@@ -79,7 +79,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": ".list-of-saved-cards .card-input-field-container:nth-child(3) a.delete-saved-card",
+                "selector": "div#sa3 a.delete-saved-card",
                 "type": "fire_events"
             }
         },
@@ -88,7 +88,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]"
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]:visible"
                         }
                     ]
                 }

@@ -77,7 +77,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div#sa1 a.delete-saved-card"
+                            "sizzleSelector": "div#sa3 a.delete-saved-card"
                         }
                     ]
                 }
@@ -96,7 +96,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div#sa1 a.delete-saved-card",
+                "selector": "div#sa3 a.delete-saved-card",
                 "type": "fire_events"
             }
         },
@@ -124,7 +124,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]:visible"
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"][style=\"\"]"
                         }
                     ]
                 }
@@ -142,7 +142,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a[id=\"stored-card-add-btn\"]:visible",
+                "selector": "a[id=\"stored-card-add-btn\"][style=\"\"]",
                 "type": "fire_events"
             }
         },

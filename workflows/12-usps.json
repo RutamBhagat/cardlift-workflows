@@ -48,9 +48,29 @@
                         "urlSelectors": [
                             "https://store.usps.com/store/myaccount/profile.jsp"
                         ]
+                    },
+                    {
+                        "urlSelectors": [
+                            "https://reg.usps.com/entreg/secure/InformedDeliveryValidateAction_input"
+                        ]
                     }
                 ],
                 "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://reg.usps.com/entreg/secure/InformedDeliveryValidateAction_input"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://store.usps.com/store/myaccount/profile.jsp"
             }
         },
         {

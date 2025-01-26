@@ -91,7 +91,7 @@
                 "message": "We are removing an existing card",
                 "title": "Removing Card"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -124,7 +124,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"stored-card-add-btn\"][style=\"\"]"
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"][style]:not([style*=\"display: none\"])"
                         }
                     ]
                 }
@@ -142,7 +142,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a[id=\"stored-card-add-btn\"][style=\"\"]",
+                "selector": "a[id=\"stored-card-add-btn\"][style]:not([style*=\"display: none\"])",
                 "type": "fire_events"
             }
         },

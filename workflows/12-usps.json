@@ -111,7 +111,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[autocomplete=\"cc-number\"]"
+                            "sizzleSelector": "iframe[id=\"vantiv-payframe\"]"
                         }
                     ]
                 }
@@ -119,7 +119,28 @@
             "executionType": "separate",
             "isRequired": true,
             "operation": {
-                "type": "autofill_card_data"
+                "cardProperty": "cardNumber",
+                "events": ["click", "fillInputData", "input"],
+                "selector": "input[id=\"accountNumber\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "iframe[id=\"vantiv-payframe\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": ["click", "fillInputData", "input"],
+                "selector": "input[id=\"cvv\"]",
+                "type": "fire_events"
             }
         },
         {

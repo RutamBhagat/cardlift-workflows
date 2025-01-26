@@ -69,6 +69,25 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": ".list-of-saved-cards .card-input-field-container:nth-child(3) a.delete-saved-card"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": ".list-of-saved-cards .card-input-field-container:nth-child(3) a.delete-saved-card",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "a[id=\"stored-card-add-btn\"]"
                         }
                     ]

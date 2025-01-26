@@ -371,6 +371,19 @@
                 "selector": "a[id=\"savebtn\"]",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "span[id^=\"cardMask\"]:contains(\"$cardNumber\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": true,

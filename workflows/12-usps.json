@@ -107,7 +107,7 @@
             "executionType": "separate",
             "isRequired": true,
             "operation": {
-                "message": "waiting for page load",
+                "message": "",
                 "successConditional": [
                     {
                         "elementSelectors": [

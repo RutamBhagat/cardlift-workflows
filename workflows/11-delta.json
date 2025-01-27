@@ -363,13 +363,26 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
+                            "sizzleSelector": "https://www.delta.com/myprofile/payment-methods"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "isRequired": true
+            "isRequired": true,
+            "operation": {
+                "message": "Waiting for app confirmation please wait",
+                "successConditional": [
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
+                            }
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
         }
     ],
     "testing": true,

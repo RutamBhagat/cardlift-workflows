@@ -173,33 +173,13 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[formcontrolname=\"paymentCardNickName\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "nickname",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[formcontrolname=\"paymentCardNickName\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
                             "sizzleSelector": "input[formcontrolname=\"paymentCardNum\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -257,7 +237,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "span.select-ui-wrapper[id=\"savedAddress-wrapper\"]"
+                            "sizzleSelector": "#id_countryCode_add-val"
                         }
                     ]
                 }
@@ -268,7 +248,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "span.select-ui-wrapper[id=\"savedAddress-wrapper\"]",
+                "selector": "#id_countryCode_add-val",
                 "type": "fire_events"
             }
         },
@@ -277,19 +257,157 @@
                 {
                     "elementSelectors": [
                         {
-                            ":visible": true,
-                            "sizzleSelector": "#ui-list-savedAddress1"
+                            "sizzleSelector": "ul[id='id_countryCode_add-desc'] > li.select-ui-optionList:contains($countryFull)"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "#ui-list-savedAddress1",
+                "selector": "ul[id='id_countryCode_add-desc'] > li.select-ui-optionList:contains($countryFull)",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#id_addressLine1Text_add",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "#id_addressLine1Text_add",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#id_addressLine2Text_add",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address2",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "#id_addressLine2Text_add",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#id_cityLocalityName_add",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "#id_cityLocalityName_add",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#id_countrySubdivisionCode_add-val"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "",
+                "events": [
+                    "click"
+                ],
+                "selector": "#id_countrySubdivisionCode_add-val",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "ul[id='id_countrySubdivisionCode_add-desc'] > li.select-ui-optionList:contains($stateFull)"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "stateFull",
+                "events": [
+                    "click"
+                ],
+                "selector": "ul[id='id_countrySubdivisionCode_add-desc'] > li.select-ui-optionList:contains($stateFull)",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#id_postalCode_add",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "#id_postalCode_add",
                 "type": "fire_events"
             }
         },

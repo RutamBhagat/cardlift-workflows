@@ -73,6 +73,48 @@
             }
         },
         {
+            "executionType": "separate",
+            "info": {
+                "message": "Deleting the 4th card to make space for the new one (if needed) - Step 1/3.",
+                "title": "Deleting 4th Card - Edit"
+            },
+            "operation": {
+                "type": "fire_events",
+                "selector": "ul.list-group-unstyled > li:nth-child(4) a:contains('Edit')",
+                "events": [
+                    "click"
+                ]
+            }
+        },
+        {
+            "executionType": "separate",
+            "info": {
+                "message": "Deleting the 4th card to make space for the new one (if needed) - Step 2/3.",
+                "title": "Deleting 4th Card - Remove"
+            },
+            "operation": {
+                "type": "fire_events",
+                "selector": "a.removePaymentLink.mr-md-4",
+                "events": [
+                    "click"
+                ]
+            }
+        },
+        {
+            "executionType": "separate",
+            "info": {
+                "message": "Confirming removal of the 4th card - Step 3/3.",
+                "title": "Confirming 4th Card Removal"
+            },
+            "operation": {
+                "type": "fire_events",
+                "selector": "div[aria-label='dialog Remove Payment Method'] button:textEquals('YES')",
+                "events": [
+                    "click"
+                ]
+            }
+        },
+        {
             "conditional": [
                 {
                     "elementSelectors": [

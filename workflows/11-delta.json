@@ -152,6 +152,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
+            },
+            "info": {
+                "message": "We're filling in your card details ",
+                "title": "Filling in your Card Details"
+            },
             "operation": {
                 "events": [
                     "click"
@@ -249,19 +257,18 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "select[formcontrolname=\"countryCode\"]"
+                            "sizzleSelector": "span.select-ui-wrapper[id=\"savedAddress-wrapper\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
-                "cardProperty": "countryFull",
                 "events": [
-                    "selectInputData",
-                    "change"
+                    "click"
                 ],
-                "selector": "select[formcontrolname=\"countryCode\"]",
+                "selector": "span.select-ui-wrapper[id=\"savedAddress-wrapper\"]",
                 "type": "fire_events"
             }
         },
@@ -270,103 +277,19 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[formcontrolname=\"addressLine1Text\"]"
+                            ":visible": true,
+                            "sizzleSelector": "#ui-list-savedAddress1"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
-                "cardProperty": "address",
                 "events": [
-                    "fillInputData",
-                    "input"
+                    "click"
                 ],
-                "selector": "input[formcontrolname=\"addressLine1Text\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[formcontrolname=\"addressLine2Text\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "address2",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[formcontrolname=\"addressLine2Text\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[formcontrolname=\"cityLocalityName\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "city",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[formcontrolname=\"cityLocalityName\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "select[formcontrolname=\"countrySubdivisionCode\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "state",
-                "events": [
-                    "selectInputData",
-                    "change"
-                ],
-                "selector": "select[formcontrolname=\"countrySubdivisionCode\"]",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[formcontrolname=\"postalCode\"]"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "zip",
-                "events": [
-                    "fillInputData",
-                    "input"
-                ],
-                "selector": "input[formcontrolname=\"postalCode\"]",
+                "selector": "#ui-list-savedAddress1",
                 "type": "fire_events"
             }
         },
@@ -432,26 +355,13 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "https://www.delta.com/myprofile/payment-methods"
+                            "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
-            "operation": {
-                "message": "Waiting for app confirmation please wait",
-                "successConditional": [
-                    {
-                        "elementSelectors": [
-                            {
-                                "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
-                            }
-                        ]
-                    }
-                ],
-                "type": "await_user_help"
-            }
+            "isRequired": true
         }
     ],
     "testing": true,

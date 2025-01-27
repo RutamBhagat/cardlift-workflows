@@ -99,7 +99,7 @@
                     "urlSelectors": [],
                     "watchedElementSelectors": [
                         {
-                            "sizzleSelector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]"
+                            "sizzleSelector": "div[class=\"white-overlay hard-block\"]"
                         }
                     ]
                 }
@@ -112,7 +112,7 @@
                     {
                         "elementSelectors": [
                             {
-                                "sizzleSelector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]"
+                                "sizzleSelector": "div[class=\"white-overlay hard-block\"][style=\"display: none;\"]"
                             }
                         ]
                     }
@@ -126,7 +126,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]"
+                            "sizzleSelector": "div[id=\"sa3\"] a[id=\"deleteLink3\"]"
                         }
                     ]
                 }
@@ -134,15 +134,15 @@
             "excludeConditional": [],
             "executionType": "separate",
             "help": {
-                "message": "Credit card delete button not found 1",
-                "title": "Credit card delete button not found 1"
+                "message": "Delete credit card button not found",
+                "title": "Delete credit card button not found"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
                 ],
-                "selector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]",
+                "selector": "div[id=\"sa3\"] a[id=\"deleteLink3\"]",
                 "type": "fire_events"
             },
             "retryConditional": []
@@ -160,10 +160,10 @@
             "excludeConditional": [],
             "executionType": "separate",
             "help": {
-                "message": "Credit card delete button not found 2",
-                "title": "Credit card delete button not found 2"
+                "message": "Delete credit card confirmation button not found",
+                "title": "Delete credit card confirmation button not found"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -178,7 +178,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]:visible"
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]"
                         }
                     ]
                 }
@@ -196,7 +196,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a[id=\"stored-card-add-btn\"]:visible",
+                "selector": "a[id=\"stored-card-add-btn\"]",
                 "type": "fire_events"
             },
             "retryConditional": []

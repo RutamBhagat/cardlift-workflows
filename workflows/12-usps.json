@@ -96,16 +96,18 @@
         {
             "conditional": [
                 {
-                    "elementSelectors": [
+                    "urlSelectors": [],
+                    "watchedElementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"stored-card-add-btn\"][style=\"display: none;\"]"
+                            "sizzleSelector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
-                "message": "",
+                "message": "waiting for page load",
                 "successConditional": [
                     {
                         "elementSelectors": [
@@ -116,7 +118,8 @@
                     }
                 ],
                 "type": "await_user_help"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [
@@ -130,7 +133,11 @@
             ],
             "excludeConditional": [],
             "executionType": "separate",
-            "isRequired": false,
+            "help": {
+                "message": "Credit card delete button not found 1",
+                "title": "Credit card delete button not found 1"
+            },
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -152,7 +159,11 @@
             ],
             "excludeConditional": [],
             "executionType": "separate",
-            "isRequired": false,
+            "help": {
+                "message": "Credit card delete button not found 2",
+                "title": "Credit card delete button not found 2"
+            },
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -167,7 +178,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]:not([style=\"display: none;\"])"
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"]:visible"
                         }
                     ]
                 }
@@ -185,9 +196,10 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a[id=\"stored-card-add-btn\"]:not([style=\"display: none;\"])",
+                "selector": "a[id=\"stored-card-add-btn\"]:visible",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [

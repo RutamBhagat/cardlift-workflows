@@ -98,6 +98,31 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "a[id=\"stored-card-add-btn\"][style=\"display: none;\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "",
+                "successConditional": [
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]"
+                            }
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "div[id=\"sa1\"] a[id=\"deleteLink1\"]"
                         }
                     ]

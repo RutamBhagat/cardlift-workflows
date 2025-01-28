@@ -164,8 +164,11 @@
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#ccNumber",
                 "type": "fire_events"

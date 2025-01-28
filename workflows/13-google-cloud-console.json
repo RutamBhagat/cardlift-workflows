@@ -1,0 +1,168 @@
+{
+    "category": "productivity",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "console.cloud.google.com",
+    "id": "",
+    "name": "Google Cloud Console",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "isRequired": true,
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://console.cloud.google.com/welcome"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.figma.com/login"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please sign in to your Google Cloud Console account.",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://console.cloud.google.com/welcome"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "linked",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://console.cloud.google.com/welcome"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#panelgoog_1184807591 > cfc-panel-body > cfc-virtual-viewport > div.cfc-virtual-scroll-content-wrapper > div > div > div.landing-page-centering > section.landing-page-cards-section > landing-page-cards > div > lp-quick-access > div > lp-quick-access-cards > div > a:nth-child(3) > div > div > div.content-text > div"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "#panelgoog_1184807591 > cfc-panel-body > cfc-virtual-viewport > div.cfc-virtual-scroll-content-wrapper > div > div > div.landing-page-centering > section.landing-page-cards-section > landing-page-cards > div > lp-quick-access > div > lp-quick-access-cards > div > a:nth-child(3) > div > div > div.content-text > div",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#cfctest-section-nav-item-settings > span.mdc-button__label > span"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "#cfctest-section-nav-item-settings > span.mdc-button__label > span",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#iframeBody > div.b3id-payment-methods.b3-payment-methods > div > div > div:nth-child(1) > div.b3-payment-methods-add-instrument-form.b3id-payment-methods-add-instrument-form.b3id-simple-form.b3-simple-form > div.b3id-form-field.b3-simple-form-form-field > div > a > div > div.b3id-info-message-html.b3-info-message-html.b3-info-message-image-message > span"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "#iframeBody > div.b3id-payment-methods.b3-payment-methods > div > div > div:nth-child(1) > div.b3-payment-methods-add-instrument-form.b3id-payment-methods-add-instrument-form.b3id-simple-form.b3-simple-form > div.b3id-form-field.b3-simple-form-form-field > div > a > div > div.b3id-info-message-html.b3-info-message-html.b3-info-message-image-message > span",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#expandingForm_591499092_option3 > div > div.b3id-expanding-form-selector-option-content.b3-expanding-form-selector-option-content > div > span"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "#expandingForm_591499092_option3 > div > div.b3id-expanding-form-selector-option-content.b3-expanding-form-selector-option-content > div > span",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#iframeBody > div.b3id-fix-instrument.b3-fix-instrument > div.b3-fix-instrument-content > div.b3id-instrument-selector-component.b3-instrument-selector-component > div > section > div.b3id-expanding-form-selector-forms-container > div:nth-child(4) > div > div.b3id-card-form.b3-card-form.instrument-form > div > div.b3-collapsing-form-edit-only-expanding-section > div > div.b3-collapsable-container-expanded-content.b3id-collapsable-container-expanded-content > div > div > div.b3id-pan-field.b3-pan-field > div.b3id-input.b3-input.invalid > div > div.b3id-text-input-container.b3-text-input-container > input"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "#iframeBody > div.b3id-fix-instrument.b3-fix-instrument > div.b3-fix-instrument-content > div.b3id-instrument-selector-component.b3-instrument-selector-component > div > section > div.b3id-expanding-form-selector-forms-container > div:nth-child(4) > div > div.b3id-card-form.b3-card-form.instrument-form > div > div.b3-collapsing-form-edit-only-expanding-section > div > div.b3-collapsable-container-expanded-content.b3id-collapsable-container-expanded-content > div > div > div.b3id-pan-field.b3-pan-field > div.b3id-input.b3-input.invalid > div > div.b3id-text-input-container.b3-text-input-container > input",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "watchedElementSelectors": [
+                        {
+                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate"
+        }
+    ],
+    "testing": true,
+    "type": "BUSINESS"
+}

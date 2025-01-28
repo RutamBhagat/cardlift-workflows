@@ -143,8 +143,11 @@
             "operation": {
                 "cardProperty": "name",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#ccName",
                 "type": "fire_events"
@@ -164,8 +167,11 @@
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#ccNumber",
                 "type": "fire_events"
@@ -185,8 +191,10 @@
             "operation": {
                 "cardProperty": "cardExpirationMonth",
                 "events": [
+                    "focus",
                     "selectInputData",
-                    "change"
+                    "change",
+                    "blur"
                 ],
                 "selector": "select#expMonth",
                 "type": "fire_events"
@@ -206,8 +214,10 @@
             "operation": {
                 "cardProperty": "cardExpirationYear",
                 "events": [
+                    "focus",
                     "selectInputData",
-                    "change"
+                    "change",
+                    "blur"
                 ],
                 "selector": "select#expYear",
                 "type": "fire_events"
@@ -227,8 +237,11 @@
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#cvv",
                 "type": "fire_events"
@@ -248,8 +261,11 @@
             "operation": {
                 "cardProperty": "address",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#address1",
                 "type": "fire_events"
@@ -269,8 +285,11 @@
             "operation": {
                 "cardProperty": "address2",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#address2",
                 "type": "fire_events"
@@ -290,8 +309,11 @@
             "operation": {
                 "cardProperty": "city",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#city",
                 "type": "fire_events"
@@ -311,8 +333,10 @@
             "operation": {
                 "cardProperty": "state",
                 "events": [
+                    "focus",
                     "selectInputData",
-                    "change"
+                    "change",
+                    "blur"
                 ],
                 "selector": "select#state",
                 "type": "fire_events"
@@ -332,8 +356,11 @@
             "operation": {
                 "cardProperty": "zip",
                 "events": [
+                    "focus",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "blur"
                 ],
                 "selector": "input#postalCode",
                 "type": "fire_events"
@@ -363,7 +390,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "button#update_profile_button"
+                            "sizzleSelector": "#update_profile_button > span > span"
                         }
                     ]
                 }
@@ -373,20 +400,12 @@
                 "events": [
                     "click"
                 ],
-                "selector": "button#update_profile_button",
+                "selector": "#update_profile_button > span > span",
                 "type": "fire_events"
             }
         },
         {
-            "conditional": [
-                {
-                    "watchedElementSelectors": [
-                        {
-                            "sizzleSelector": ""
-                        }
-                    ]
-                }
-            ],
+            "conditional": [],
             "executionType": "separate"
         }
     ],

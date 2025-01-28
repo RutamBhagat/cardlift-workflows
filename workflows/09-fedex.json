@@ -143,11 +143,8 @@
             "operation": {
                 "cardProperty": "name",
                 "events": [
-                    "focus",
                     "fillInputData",
-                    "input",
-                    "change",
-                    "blur"
+                    "input"
                 ],
                 "selector": "input#ccName",
                 "type": "fire_events"
@@ -167,11 +164,8 @@
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
-                    "focus",
                     "fillInputData",
-                    "input",
-                    "change",
-                    "blur"
+                    "input"
                 ],
                 "selector": "input#ccNumber",
                 "type": "fire_events"
@@ -191,10 +185,8 @@
             "operation": {
                 "cardProperty": "cardExpirationMonth",
                 "events": [
-                    "focus",
                     "selectInputData",
-                    "change",
-                    "blur"
+                    "change"
                 ],
                 "selector": "select#expMonth",
                 "type": "fire_events"
@@ -214,10 +206,8 @@
             "operation": {
                 "cardProperty": "cardExpirationYear",
                 "events": [
-                    "focus",
                     "selectInputData",
-                    "change",
-                    "blur"
+                    "change"
                 ],
                 "selector": "select#expYear",
                 "type": "fire_events"
@@ -285,11 +275,8 @@
             "operation": {
                 "cardProperty": "address2",
                 "events": [
-                    "focus",
                     "fillInputData",
-                    "input",
-                    "change",
-                    "blur"
+                    "input"
                 ],
                 "selector": "input#address2",
                 "type": "fire_events"
@@ -309,11 +296,8 @@
             "operation": {
                 "cardProperty": "city",
                 "events": [
-                    "focus",
                     "fillInputData",
-                    "input",
-                    "change",
-                    "blur"
+                    "input"
                 ],
                 "selector": "input#city",
                 "type": "fire_events"
@@ -333,10 +317,8 @@
             "operation": {
                 "cardProperty": "state",
                 "events": [
-                    "focus",
                     "selectInputData",
-                    "change",
-                    "blur"
+                    "change"
                 ],
                 "selector": "select#state",
                 "type": "fire_events"
@@ -356,11 +338,8 @@
             "operation": {
                 "cardProperty": "zip",
                 "events": [
-                    "focus",
                     "fillInputData",
-                    "input",
-                    "change",
-                    "blur"
+                    "input"
                 ],
                 "selector": "input#postalCode",
                 "type": "fire_events"

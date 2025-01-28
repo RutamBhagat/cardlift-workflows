@@ -384,8 +384,17 @@
             }
         },
         {
-            "conditional": [],
-            "executionType": "separate"
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.fdx-c-toast__body div.fdx-c-toast__description p.fdx-u-text--default:contains('Your profile has been saved successfully with new changes applied')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": true,

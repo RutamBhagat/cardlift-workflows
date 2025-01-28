@@ -165,10 +165,13 @@
                 "cardProperty": "cardNumber",
                 "events": [
                     "focus",
+                    "compositionstart",
                     "fillInputData",
                     "input",
                     "change",
-                    "blur"
+                    "compositionend",
+                    "blur",
+                    "focusout"
                 ],
                 "selector": "input#ccNumber",
                 "type": "fire_events"

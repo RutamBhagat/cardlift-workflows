@@ -28,7 +28,7 @@
             "conditional": [
                 {
                     "urlSelectors": [
-                        "https://www.figma.com/login"
+                        "https://accounts.google.com/"
                     ]
                 }
             ],
@@ -43,6 +43,14 @@
                     }
                 ],
                 "type": "await_user_help"
+            }
+        },
+        {
+            "executionType": "separate",
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://console.cloud.google.com/welcome"
             }
         },
         {

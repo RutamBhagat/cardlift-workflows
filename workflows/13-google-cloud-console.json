@@ -104,6 +104,25 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate", 
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))",
+                "type": "fire_events"  
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "a:contains('Add a primary payment method')"
                         }
                     ]

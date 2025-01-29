@@ -123,7 +123,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[data-page-title=\"Remove payment method?\"]"
+                            "sizzleSelector": "div.jfk-button.jfk-button-action.b3-button:contains('Remove')"
                         }
                     ]
                 }
@@ -133,7 +133,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div[data-page-title=\"Remove payment method?\"]",
+                "selector": "div.jfk-button.jfk-button-action.b3-button:contains('Remove')",
                 "type": "fire_events"
             }
         },

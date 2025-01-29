@@ -109,13 +109,13 @@
                     ]
                 }
             ],
-            "executionType": "separate", 
+            "executionType": "separate",
             "operation": {
                 "events": [
                     "click"
                 ],
                 "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))",
-                "type": "fire_events"  
+                "type": "fire_events"
             }
         },
         {
@@ -206,7 +206,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
+                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")"
                         }
                     ]
                 }
@@ -222,7 +222,7 @@
                     "click",
                     "DOMActivate"
                 ],
-                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
+                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")",
                 "type": "fire_events"
             },
             "retryConditional": []

@@ -123,6 +123,25 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "div[data-page-title=\"Remove payment method?\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div[data-page-title=\"Remove payment method?\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "a:contains('Add a primary payment method')"
                         }
                     ]

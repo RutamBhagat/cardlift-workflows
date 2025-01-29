@@ -187,19 +187,29 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
+                            "sizzleSelector": "div.b3id-widget-button.b3-widget-button.b3-submit-button.b3id-button-list > div"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
-                    "click"
+                    "mouseover",
+                    "mouseenter",
+                    "focus",
+                    "DOMFocusIn",
+                    "blur",
+                    "DOMFocusOut",
+                    "click",
+                    "DOMActivate",
+                    "mouseleave"
                 ],
-                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
+                "selector": "div.b3id-widget-button.b3-widget-button.b3-submit-button.b3id-button-list > div",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": []
         },
         {
             "conditional": [

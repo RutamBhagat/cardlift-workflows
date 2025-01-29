@@ -96,30 +96,15 @@
         {
             "conditional": [
                 {
-                    "urlSelectors": [],
-                    "watchedElementSelectors": [
+                    "elementSelectors": [
                         {
-                            "sizzleSelector": "div[class=\"white-overlay hard-block\"]"
+                            "sizzleSelector": "div[class=\"white-overlay hard-block\"][style=\"display: none;\"]"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
-            "operation": {
-                "message": "",
-                "successConditional": [
-                    {
-                        "elementSelectors": [
-                            {
-                                "sizzleSelector": "div[class=\"white-overlay hard-block\"][style=\"display: none;\"]"
-                            }
-                        ]
-                    }
-                ],
-                "type": "await_user_help"
-            },
-            "retryConditional": []
+            "isRequired": true
         },
         {
             "conditional": [
@@ -185,12 +170,12 @@
             ],
             "executionType": "separate",
             "help": {
-                "message": "We're having trouble finding the add new card button.",
-                "title": "Trouble Adding New Card"
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
             },
             "info": {
-                "message": "We are adding a new card to your account",
-                "title": "Adding New Card"
+                "message": "We're filling in your card details ",
+                "title": "Filling in your Card Details"
             },
             "operation": {
                 "events": [

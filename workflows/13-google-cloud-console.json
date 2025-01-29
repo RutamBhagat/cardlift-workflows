@@ -254,14 +254,15 @@
         {
             "conditional": [
                 {
-                    "watchedElementSelectors": [
+                    "elementSelectors": [
                         {
-                            "sizzleSelector": "div:textEquals('Successfully updated your payment method.')"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) div.b3id-instrument-details-label:contains(\"$cardNumber\")"
                         }
                     ]
                 }
             ],
-            "executionType": "separate"
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": true,

@@ -169,6 +169,114 @@
         {
             "conditional": [
                 {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name='expirationDate-month'][type='tel'][autocomplete='cc-exp-month']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate", 
+            "operation": {
+                "cardProperty": "cardExpirationMonth",
+                "events": ["focus", "fillInputData", "input", "change", "blur"],
+                "selector": "input[name='expirationDate-month'][type='tel'][autocomplete='cc-exp-month']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name='expirationDate-year'][type='tel'][autocomplete='cc-exp-year']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationYearShort",
+                "events": ["focus", "fillInputData", "input", "change", "blur"],
+                "selector": "input[name='expirationDate-year'][type='tel'][autocomplete='cc-exp-year']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name='cvc'][type='tel']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc", 
+                "events": ["focus", "fillInputData", "input", "change", "blur"],
+                "selector": "input[name='cvc'][type='tel']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name='cardHolderNameField'][type='text']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "name",
+                "events": ["focus", "fillInputData", "input", "change", "blur"],
+                "selector": "input[name='cardHolderNameField'][type='text']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": ".goog-flat-menu-button[aria-label='Country']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate", 
+            "operation": {
+                "cardProperty": "countryFull",
+                "events": ["click", "selectInputData"],
+                "selector": ".goog-flat-menu-button[aria-label='Country']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name='POSTAL_CODE'][type='tel']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": ["focus", "fillInputData", "input", "change", "blur"],
+                "selector": "input[name='POSTAL_CODE'][type='tel']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
                     "watchedElementSelectors": [
                         {
                             "sizzleSelector": "div:textEquals('Successfully updated your payment method.')"

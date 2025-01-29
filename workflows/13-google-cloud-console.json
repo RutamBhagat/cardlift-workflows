@@ -187,7 +187,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3id-widget-button.b3-widget-button.b3-submit-button.b3id-button-list > div"
+                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
                         }
                     ]
                 }
@@ -203,7 +203,7 @@
                     "click",
                     "DOMActivate"
                 ],
-                "selector": "div.b3id-widget-button.b3-widget-button.b3-submit-button.b3id-button-list > div",
+                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
                 "type": "fire_events"
             },
             "retryConditional": []

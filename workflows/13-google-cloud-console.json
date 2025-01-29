@@ -119,7 +119,6 @@
             }
         },
         {
-            "isRequired": true,
             "conditional": [
                 {
                     "elementSelectors": [
@@ -130,6 +129,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -139,7 +139,6 @@
             }
         },
         {
-            "isRequired": true,
             "conditional": [
                 {
                     "elementSelectors": [
@@ -150,6 +149,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -176,12 +176,10 @@
                     ]
                 }
             ],
-            "executionType": "separate", 
+            "executionType": "separate",
+            "isRequired": true,
             "operation": {
-                "cardProperty": "cardExpirationMonth",
-                "events": ["focus", "fillInputData", "input", "change", "blur"],
-                "selector": "input[name='expirationDate-month'][type='tel'][autocomplete='cc-exp-month']",
-                "type": "fire_events"
+                "type": "autofill_card_data"
             }
         },
         {
@@ -189,88 +187,17 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name='expirationDate-year'][type='tel'][autocomplete='cc-exp-year']"
+                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "cardExpirationYearShort",
-                "events": ["focus", "fillInputData", "input", "change", "blur"],
-                "selector": "input[name='expirationDate-year'][type='tel'][autocomplete='cc-exp-year']",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[name='cvc'][type='tel']"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "cardCvc", 
-                "events": ["focus", "fillInputData", "input", "change", "blur"],
-                "selector": "input[name='cvc'][type='tel']",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[name='cardHolderNameField'][type='text']"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "name",
-                "events": ["focus", "fillInputData", "input", "change", "blur"],
-                "selector": "input[name='cardHolderNameField'][type='text']",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": ".goog-flat-menu-button[aria-label='Country']"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate", 
-            "operation": {
-                "cardProperty": "countryFull",
-                "events": ["click", "selectInputData"],
-                "selector": ".goog-flat-menu-button[aria-label='Country']",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "input[name='POSTAL_CODE'][type='tel']"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "cardProperty": "zip",
-                "events": ["focus", "fillInputData", "input", "change", "blur"],
-                "selector": "input[name='POSTAL_CODE'][type='tel']",
+                "events": [
+                    "click"
+                ],
+                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
                 "type": "fire_events"
             }
         },

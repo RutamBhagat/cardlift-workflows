@@ -134,6 +134,25 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "div.idp-expansion-panel__description--action > button:contains(\"add\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div.idp-expansion-panel__description--action > button:contains(\"add\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "a[class=\"addPayment_methods_link\"]"
                         }
                     ]

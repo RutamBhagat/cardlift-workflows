@@ -196,15 +196,12 @@
             "isRequired": true,
             "operation": {
                 "events": [
-                    "mouseover",
-                    "mouseenter",
                     "focus",
                     "DOMFocusIn",
                     "blur",
                     "DOMFocusOut",
                     "click",
-                    "DOMActivate",
-                    "mouseleave"
+                    "DOMActivate"
                 ],
                 "selector": "div.b3id-widget-button.b3-widget-button.b3-submit-button.b3id-button-list > div",
                 "type": "fire_events"

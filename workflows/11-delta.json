@@ -167,6 +167,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
+            },
+            "info": {
+                "message": "We're filling in your card details ",
+                "title": "Filling in your Card Details"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
@@ -467,6 +475,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Need help setting your card as the default payment method",
+                "title": "Help us set the Default Payment Method"
+            },
+            "info": {
+                "message": "We're setting your new card as the default",
+                "title": "Setting Default Payment Method"
+            },
             "isRequired": true
         }
     ],

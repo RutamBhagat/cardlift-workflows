@@ -212,7 +212,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "focus",
@@ -226,6 +226,30 @@
                 "type": "fire_events"
             },
             "retryConditional": []
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "focus",
+                    "DOMFocusIn",
+                    "blur",
+                    "DOMFocusOut",
+                    "click",
+                    "DOMActivate"
+                ],
+                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
+                "type": "fire_events"
+            }
         },
         {
             "conditional": [

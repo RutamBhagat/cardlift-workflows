@@ -119,11 +119,12 @@
             }
         },
         {
+            "isRequired": true,
             "conditional": [
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-additional-instrument-option-label:contains('Add credit or debit card')"
+                            "sizzleSelector": "span[class='b3-additional-instrument-option-label']:contains('Add credit or debit card')"
                         }
                     ]
                 }
@@ -133,16 +134,17 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div.b3-additional-instrument-option-label:contains('Add credit or debit card')",
+                "selector": "span[class='b3-additional-instrument-option-label']:contains('Add credit or debit card')",
                 "type": "fire_events"
             }
         },
         {
+            "isRequired": true,
             "conditional": [
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "span[class=\"b3-additional-instrument-option-label\"][data-was-visible=\"true\"]:contains(\"Add credit or debit card\")"
+                            "sizzleSelector": "input[name='cardnumber'][autocomplete='off-card-number'][data-was-visible='true']"
                         }
                     ]
                 }
@@ -151,10 +153,16 @@
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
+                    "focus",
+                    "compositionstart",
                     "fillInputData",
-                    "input"
+                    "input",
+                    "change",
+                    "compositionend",
+                    "blur",
+                    "focusout"
                 ],
-                "selector": "span[class=\"b3-additional-instrument-option-label\"][data-was-visible=\"true\"]:contains(\"Add credit or debit card\")",
+                "selector": "input[name='cardnumber'][autocomplete='off-card-number'][data-was-visible='true']",
                 "type": "fire_events"
             }
         },
@@ -163,7 +171,7 @@
                 {
                     "watchedElementSelectors": [
                         {
-                            "sizzleSelector": "div:textEquals(\"Successfully updated your payment method.\")"
+                            "sizzleSelector": "div:textEquals('Successfully updated your payment method.')"
                         }
                     ]
                 }

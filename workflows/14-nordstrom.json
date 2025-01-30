@@ -68,7 +68,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name=\"cardNumber\"]"
+                            "sizzleSelector": "input[name='cardNumber']"
                         }
                     ]
                 }
@@ -80,7 +80,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name=\"cardNumber\"]",
+                "selector": "input[name='cardNumber']",
                 "type": "fire_events"
             }
         },
@@ -89,7 +89,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name=\"expirationDate\"]"
+                            "sizzleSelector": "input[name='expirationDate']"
                         }
                     ]
                 }
@@ -101,7 +101,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name=\"expirationDate\"]",
+                "selector": "input[name='expirationDate']",
                 "type": "fire_events"
             }
         },
@@ -110,7 +110,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name=\"securityCode\"]"
+                            "sizzleSelector": "input[name='securityCode']"
                         }
                     ]
                 }
@@ -122,7 +122,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name=\"securityCode\"]",
+                "selector": "input[name='securityCode']",
                 "type": "fire_events"
             }
         },
@@ -131,7 +131,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a:contains(\"Add new address\")"
+                            "sizzleSelector": "a:contains('Add new address')"
                         }
                     ]
                 }
@@ -141,7 +141,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a:contains(\"Add new address\")",
+                "selector": "a:contains('Add new address')",
                 "type": "fire_events"
             }
         },
@@ -150,7 +150,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name=\"firstName\"]"
+                            "sizzleSelector": "input[name='firstName']"
                         }
                     ]
                 }
@@ -162,7 +162,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name=\"firstName\"]",
+                "selector": "input[name='firstName']",
                 "type": "fire_events"
             }
         },
@@ -171,7 +171,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name=\"lastName\"]"
+                            "sizzleSelector": "input[name='lastName']"
                         }
                     ]
                 }
@@ -183,7 +183,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name=\"lastName\"]",
+                "selector": "input[name='lastName']",
                 "type": "fire_events"
             }
         },
@@ -192,7 +192,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name=\"address\"][autocomplete=\"nope\"]"
+                            "sizzleSelector": "input[name='address'][autocomplete='nope']"
                         }
                     ]
                 }
@@ -204,7 +204,7 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name=\"address\"][autocomplete=\"nope\"]",
+                "selector": "input[name='address'][autocomplete='nope']",
                 "type": "fire_events"
             }
         },
@@ -213,7 +213,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "button:contains(\"save\")"
+                            "sizzleSelector": "button:contains('save')"
                         }
                     ]
                 }
@@ -223,12 +223,22 @@
                 "events": [
                     "click"
                 ],
-                "selector": "button:contains(\"save\")",
+                "selector": "button:contains('save')",
                 "type": "fire_events"
             }
         },
         {
-            "executionType": "separate"
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "section:has(strong:textEquals('Primary payment method')) span[id^='card-desc']:contains('$cardNumber')"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": false,

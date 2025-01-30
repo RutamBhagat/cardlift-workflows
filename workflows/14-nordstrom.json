@@ -192,6 +192,32 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "input[placeholder='Quickly find your address']"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "mousedown",
+                    "focus",
+                    "focusin",
+                    "mouseup",
+                    "click",
+                    "blur",
+                    "focusout"
+                ],
+                "selector": "input[placeholder='Quickly find your address']",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "input[name=\"address\"][role=\"combobox\"][aria-owns=\"listOptions\"][aria-autocomplete=\"list\"]"
                         }
                     ]
@@ -328,6 +354,25 @@
                     "click"
                 ],
                 "selector": "button:contains('save')",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[id=\"save-card-button\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[id=\"save-card-button\"]",
                 "type": "fire_events"
             }
         },

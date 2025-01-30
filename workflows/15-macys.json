@@ -1,0 +1,72 @@
+{
+    "category": "",
+    "enabled": false,
+    "historyDetectionUrl": "",
+    "hostname": "macys.com",
+    "id": "",
+    "name": "Macys",
+    "runInFocusMode": false,
+    "steps": [
+        {
+            "executionType": "separate",
+            "help": {
+                "message": "We're having trouble finding the billing page.",
+                "title": "Trouble Finding Billing Page"
+            },
+            "info": {
+                "message": "We are filling your billing details",
+                "title": "Filling Billing Details"
+            },
+            "operation": {
+                "ignoreFailure": true,
+                "type": "navigate",
+                "url": "https://www.macys.com/account/wallet"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "urlSelectors": [
+                        "https://www.macys.com/account/signin"
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please provide your login credentials",
+                "successConditional": [
+                    {
+                        "urlSelectors": [
+                            "https://www.macys.com/account/wallet"
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "#add-payment-method"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "#add-payment-method",
+                "type": "fire_events"
+            }
+        },
+        {
+            "executionType": "separate"
+        }
+    ],
+    "testing": false,
+    "type": "CONSUMER"
+}

@@ -187,14 +187,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Please help us fill in your card details properly",
-                "title": "Trouble Filling in your Card Details"
-            },
-            "info": {
-                "message": "We're filling in your card details ",
-                "title": "Filling in your Card Details"
-            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
@@ -239,10 +231,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Please confirm to save new card and remove the old card",
-                "title": "Confirmation"
-            },
             "isRequired": false,
             "operation": {
                 "events": [
@@ -269,10 +257,6 @@
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Please submit your card",
-                "title": "Confirmation"
-            },
             "operation": {
                 "events": [
                     "focus",

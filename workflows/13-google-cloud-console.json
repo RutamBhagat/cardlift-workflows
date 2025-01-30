@@ -104,6 +104,25 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "span[data-was-visible=\"true\"]:contains(\"Add payment method\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "span[data-was-visible=\"true\"]:contains(\"Add payment method\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))"
                         }
                     ]
@@ -234,12 +253,8 @@
             "isRequired": false,
             "operation": {
                 "events": [
-                    "focus",
-                    "DOMFocusIn",
-                    "blur",
-                    "DOMFocusOut",
-                    "click",
-                    "DOMActivate"
+                    "mousedown",
+                    "mouseup"
                 ],
                 "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")",
                 "type": "fire_events"
@@ -259,12 +274,8 @@
             "executionType": "separate",
             "operation": {
                 "events": [
-                    "focus",
-                    "DOMFocusIn",
-                    "blur",
-                    "DOMFocusOut",
-                    "click",
-                    "DOMActivate"
+                    "mousedown",
+                    "mouseup"
                 ],
                 "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
                 "type": "fire_events"

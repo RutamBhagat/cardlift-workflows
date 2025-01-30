@@ -104,25 +104,6 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "span[data-was-visible=\"true\"]:contains(\"Add payment method\")"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "span[data-was-visible=\"true\"]:contains(\"Add payment method\")",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
                             "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))"
                         }
                     ]

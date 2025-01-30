@@ -488,20 +488,37 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "body:has(dd:contains(\"delta air lines\")) input"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "message": "Please provide confirmation code",
+                "successConditional": [
+                    {
+                        "elementSelectors": [
+                            {
+                                "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
+                            }
+                        ]
+                    }
+                ],
+                "type": "await_user_help"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "idp-saved-payment:contains('$cardNumber'):contains('PRIMARY')"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "help": {
-                "message": "Need help setting your card as the default payment method",
-                "title": "Help us set the Default Payment Method"
-            },
-            "info": {
-                "message": "We're setting your new card as the default",
-                "title": "Setting Default Payment Method"
-            },
             "isRequired": true
         }
     ],

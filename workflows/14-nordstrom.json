@@ -192,7 +192,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "input[name='address'][autocomplete='nope']"
+                            "sizzleSelector": "input[name=\"address\"][role=\"combobox\"][aria-owns=\"listOptions\"][aria-autocomplete=\"list\"]"
                         }
                     ]
                 }
@@ -204,7 +204,111 @@
                     "fillInputData",
                     "input"
                 ],
-                "selector": "input[name='address'][autocomplete='nope']",
+                "selector": "input[name=\"address\"][role=\"combobox\"][aria-owns=\"listOptions\"][aria-autocomplete=\"list\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "button[type=\"button\"]:contains(\"Enter address manually\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "button[type=\"button\"]:contains(\"Enter address manually\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"address1\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "address",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"address1\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"postalCode\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "zip",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"postalCode\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"city\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "city",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"city\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[name=\"state\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "stateFull",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
+                "selector": "input[name=\"state\"]",
                 "type": "fire_events"
             }
         },

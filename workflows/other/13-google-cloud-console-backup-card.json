@@ -133,7 +133,8 @@
             "operation": {
                 "events": [
                     "mousedown",
-                    "mouseup"
+                    "mouseup",
+                    ""
                 ],
                 "selector": "div[role=\"button\"]:contains(\"got it\")",
                 "type": "fire_events"

@@ -207,12 +207,13 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button"
+                            "sizzleSelector": "div.b3-payment-methods-card:contains(\"$cardNumber\") div[data-name=\"actionGroup\"].goog-flat-menu-button"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "mousedown",
@@ -222,28 +223,30 @@
                     "mouseup",
                     "click"
                 ],
-                "selector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button",
+                "selector": "div.b3-payment-methods-card:contains(\"$cardNumber\") div[data-name=\"actionGroup\"].goog-flat-menu-button",
                 "type": "fire_events"
             }
         },
         {
             "conditional": [
                 {
-                    "elementSelectors": [
+                    "elementSelectors": [],
+                    "watchedElementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div.goog-menu div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))"
+                            "sizzleSelector": "div.goog-menuitem-content:contains(\"primary\")"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "mousedown",
                     "mouseup",
                     "click"
                 ],
-                "selector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div.goog-menu div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))",
+                "selector": "div.goog-menuitem-content:contains(\"primary\")",
                 "type": "fire_events"
             }
         },

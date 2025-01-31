@@ -254,7 +254,7 @@
                     "elementSelectors": [],
                     "watchedElementSelectors": [
                         {
-                            "sizzleSelector": "#\\:4w > div:contains(\"Primary\")"
+                            "sizzleSelector": "div[class=\"goog-menuitem-content\"]:contains(\"Primary\")"
                         }
                     ]
                 }
@@ -267,7 +267,7 @@
                     "mouseup",
                     "click"
                 ],
-                "selector": "#\\:4w > div:contains(\"Primary\")",
+                "selector": "div[class=\"goog-menuitem-content\"]:contains(\"Primary\")",
                 "type": "fire_events"
             }
         },

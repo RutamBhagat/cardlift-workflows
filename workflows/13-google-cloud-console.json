@@ -54,14 +54,6 @@
             }
         },
         {
-            "executionType": "linked",
-            "operation": {
-                "ignoreFailure": true,
-                "type": "navigate",
-                "url": "https://console.cloud.google.com/welcome"
-            }
-        },
-        {
             "conditional": [
                 {
                     "elementSelectors": [
@@ -149,6 +141,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
+            },
+            "info": {
+                "message": "We're filling in your card details ",
+                "title": "Filling in your Card Details"
+            },
             "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
@@ -177,6 +177,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us properly fill in your billing address",
+                "title": "Trouble Filling in Billing Address"
+            },
+            "info": {
+                "message": "We're filling in your billing address",
+                "title": "Filling in your Billing Address"
+            },
             "isRequired": true,
             "operation": {
                 "type": "autofill_card_data"

@@ -113,7 +113,11 @@
             "operation": {
                 "events": [
                     "mousedown",
-                    "mouseup"
+                    "focus",
+                    "focus",
+                    "focusin",
+                    "mouseup",
+                    "click"
                 ],
                 "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"option\"][aria-selected=\"true\"]",
                 "type": "fire_events"
@@ -137,6 +141,26 @@
                     "click"
                 ],
                 "selector": "div[class=\"goog-menuitem-content\"]:contains(\"other\")",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div[role=\"button\"][data-key=\"ok\"][name=\"ok\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "mousedown",
+                    "mouseup"
+                ],
+                "selector": "div[role=\"button\"][data-key=\"ok\"][name=\"ok\"]",
                 "type": "fire_events"
             }
         },

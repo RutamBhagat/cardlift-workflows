@@ -104,7 +104,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) a.b3id-widget-link:has(span:textEquals('Remove'))"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"button\"]:contains('Remove')"
                         }
                     ]
                 }
@@ -112,9 +112,10 @@
             "executionType": "separate",
             "operation": {
                 "events": [
-                    "click"
+                    "mousedown",
+                    "mouseup"
                 ],
-                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) a.b3id-widget-link:has(span:textEquals('Remove'))",
+                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"button\"]:contains('Remove')",
                 "type": "fire_events"
             }
         },
@@ -123,7 +124,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.jfk-button.jfk-button-action.b3-button:contains('Remove')"
+                            "sizzleSelector": "div[role=\"button\"]:contains(\"got it\")"
                         }
                     ]
                 }
@@ -131,9 +132,10 @@
             "executionType": "separate",
             "operation": {
                 "events": [
-                    "click"
+                    "mousedown",
+                    "mouseup"
                 ],
-                "selector": "div.jfk-button.jfk-button-action.b3-button:contains('Remove')",
+                "selector": "div[role=\"button\"]:contains(\"got it\")",
                 "type": "fire_events"
             }
         },

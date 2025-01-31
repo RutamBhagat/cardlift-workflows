@@ -104,7 +104,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"button\"]:contains('Remove')"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"option\"][aria-selected=\"true\"]"
                         }
                     ]
                 }
@@ -115,7 +115,7 @@
                     "mousedown",
                     "mouseup"
                 ],
-                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"button\"]:contains('Remove')",
+                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div[role=\"option\"][aria-selected=\"true\"]",
                 "type": "fire_events"
             }
         },
@@ -124,7 +124,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"button\"]:contains(\"got it\")"
+                            "sizzleSelector": "div[class=\"goog-menuitem-content\"]:contains(\"other\")"
                         }
                     ]
                 }
@@ -134,9 +134,9 @@
                 "events": [
                     "mousedown",
                     "mouseup",
-                    ""
+                    "click"
                 ],
-                "selector": "div[role=\"button\"]:contains(\"got it\")",
+                "selector": "div[class=\"goog-menuitem-content\"]:contains(\"other\")",
                 "type": "fire_events"
             }
         },

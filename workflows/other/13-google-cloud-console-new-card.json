@@ -208,6 +208,9 @@
                     "elementSelectors": [
                         {
                             "sizzleSelector": "div.b3-payment-methods-card:contains(\"$cardNumber\") div[data-name=\"actionGroup\"].goog-flat-menu-button"
+                        },
+                        {
+                            "sizzleSelector": "div.b3-payment-methods-card:contains(\"$cardNumber\")"
                         }
                     ]
                 }

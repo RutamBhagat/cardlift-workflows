@@ -207,7 +207,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-instrument-details:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button"
                         }
                     ]
                 }
@@ -222,7 +222,7 @@
                     "mouseup",
                     "click"
                 ],
-                "selector": "div.b3-instrument-details:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button",
+                "selector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button",
                 "type": "fire_events"
             }
         },
@@ -231,7 +231,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div.goog-menu div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))"
                         }
                     ]
                 }
@@ -243,7 +243,7 @@
                     "mouseup",
                     "click"
                 ],
-                "selector": "div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))",
+                "selector": "div.b3-payment-methods-instrument-details-section:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div.goog-menu div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))",
                 "type": "fire_events"
             }
         },

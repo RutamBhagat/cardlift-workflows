@@ -104,7 +104,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))"
+                            "sizzleSelector": "span:contains(\"add payment method\")"
                         }
                     ]
                 }
@@ -114,45 +114,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "div.jfk-button.jfk-button-action.b3-button:contains('Remove')"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "div.jfk-button.jfk-button-action.b3-button:contains('Remove')",
-                "type": "fire_events"
-            }
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "a:contains('Add a primary payment method')"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "operation": {
-                "events": [
-                    "click"
-                ],
-                "selector": "a:contains('Add a primary payment method')",
+                "selector": "span:contains(\"add payment method\")",
                 "type": "fire_events"
             }
         },
@@ -225,40 +187,79 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")"
+                            "sizzleSelector": "div[id=\"saveAddInstrument\"][role=\"button\"]:contains(\"save\")"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
-            "isRequired": false,
             "operation": {
                 "events": [
                     "mousedown",
                     "mouseup"
                 ],
-                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")",
+                "selector": "div[id=\"saveAddInstrument\"][role=\"button\"]:contains(\"save\")",
                 "type": "fire_events"
-            },
-            "retryConditional": []
+            }
         },
         {
             "conditional": [
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
+                            "sizzleSelector": "div.b3-payment-methods-card:contains(\"$cardNumber\")"
                         }
                     ]
                 }
             ],
             "executionType": "separate",
+            "isRequired": true
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.b3-payment-methods-card:contains(\"$cardNumber\") div[data-name=\"actionGroup\"].goog-flat-menu-button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "events": [
                     "mousedown",
-                    "mouseup"
+                    "focus",
+                    "focus",
+                    "focusin",
+                    "mouseup",
+                    "click"
                 ],
-                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
+                "selector": "div.b3-payment-methods-card:contains(\"$cardNumber\") div[data-name=\"actionGroup\"].goog-flat-menu-button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [],
+                    "watchedElementSelectors": [
+                        {
+                            "sizzleSelector": "#\\:4w > div:contains(\"Primary\")"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true,
+            "operation": {
+                "events": [
+                    "mousedown",
+                    "mouseup",
+                    "click"
+                ],
+                "selector": "#\\:4w > div:contains(\"Primary\")",
                 "type": "fire_events"
             }
         },

@@ -207,6 +207,44 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "div.b3-instrument-details:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div.b3-instrument-details:has(div.b3id-instrument-details-label:contains(\"$cardNumber\")) div[data-name=\"actionGroup\"].goog-flat-menu-button",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "div.goog-menuitem:has(div.goog-menuitem-content:contains(\"Primary\"))",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) div.b3id-instrument-details-label:contains(\"$cardNumber\")"
                         }
                     ]

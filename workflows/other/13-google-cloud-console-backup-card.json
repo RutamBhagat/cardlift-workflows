@@ -104,7 +104,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) a.b3id-widget-link:has(span:textEquals('Remove'))"
                         }
                     ]
                 }
@@ -114,7 +114,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) a.b3id-widget-link:has(span:textEquals('Remove'))",
+                "selector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) a.b3id-widget-link:has(span:textEquals('Remove'))",
                 "type": "fire_events"
             }
         },
@@ -142,7 +142,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a:contains('Add a primary payment method')"
+                            "sizzleSelector": "a:contains('Add a backup payment method')"
                         }
                     ]
                 }
@@ -152,7 +152,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a:contains('Add a primary payment method')",
+                "selector": "a:contains('Add a backup payment method')",
                 "type": "fire_events"
             }
         },
@@ -225,29 +225,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")"
-                        }
-                    ]
-                }
-            ],
-            "executionType": "separate",
-            "isRequired": false,
-            "operation": {
-                "events": [
-                    "mousedown",
-                    "mouseup"
-                ],
-                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"save and remove\")",
-                "type": "fire_events"
-            },
-            "retryConditional": []
-        },
-        {
-            "conditional": [
-                {
-                    "elementSelectors": [
-                        {
-                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")"
+                            "sizzleSelector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"Add backup\")"
                         }
                     ]
                 }
@@ -258,7 +236,7 @@
                     "mousedown",
                     "mouseup"
                 ],
-                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"submit\")",
+                "selector": "div[role=\"button\"][data-was-visible=\"true\"]:contains(\"Add backup\")",
                 "type": "fire_events"
             }
         },
@@ -267,7 +245,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) div.b3id-instrument-details-label:contains(\"$cardNumber\")"
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div.b3id-instrument-details-label:contains(\"$cardNumber\")"
                         }
                     ]
                 }

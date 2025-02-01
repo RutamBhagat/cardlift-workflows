@@ -21,7 +21,7 @@
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://console.cloud.google.com/welcome"
+                "url": "https://console.cloud.google.com/home/dashboard"
             }
         },
         {
@@ -39,6 +39,11 @@
                     {
                         "urlSelectors": [
                             "https://console.cloud.google.com/welcome"
+                        ]
+                    },
+                    {
+                        "urlSelectors": [
+                            "https://console.cloud.google.com/home/dashboard"
                         ]
                     }
                 ],
@@ -70,6 +75,25 @@
                     "click"
                 ],
                 "selector": "p:contains(view detailed charges)",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "cfc-icon[icon=\"close\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "events": [
+                    "click"
+                ],
+                "selector": "cfc-icon[icon=\"close\"]",
                 "type": "fire_events"
             }
         },

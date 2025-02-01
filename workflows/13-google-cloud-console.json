@@ -46,11 +46,12 @@
             }
         },
         {
+            "conditional": [],
             "executionType": "separate",
             "operation": {
                 "ignoreFailure": true,
                 "type": "navigate",
-                "url": "https://console.cloud.google.com/welcome"
+                "url": "https://console.cloud.google.com/home/dashboard"
             }
         },
         {
@@ -58,7 +59,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "div.page-title:contains('Billing')"
+                            "sizzleSelector": "p:contains(view detailed charges)"
                         }
                     ]
                 }
@@ -68,7 +69,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "div.page-title:contains('Billing')",
+                "selector": "p:contains(view detailed charges)",
                 "type": "fire_events"
             }
         },
@@ -259,7 +260,7 @@
                     ]
                 }
             ],
-            "executionType": "separate", 
+            "executionType": "separate",
             "isRequired": true,
             "operation": {
                 "events": [

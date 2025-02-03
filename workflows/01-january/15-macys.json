@@ -452,6 +452,19 @@
                 "selector": "button#save-btn",
                 "type": "fire_events"
             }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.tender-detail:has(span.tender-default):has(span.small:contains(\"$cardNumber\"))"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "isRequired": true
         }
     ],
     "testing": false,

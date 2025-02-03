@@ -64,7 +64,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "p:contains(view detailed charges)"
+                            "sizzleSelector": "a[track-type=\"adf_billing_agora\"][track-name=\"billingCardCtaLink\"] p.cfc-info-card-item-content:contains(\"View detailed charges\")"
                         }
                     ]
                 }
@@ -74,7 +74,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "p:contains(view detailed charges)",
+                "selector": "a[track-type=\"adf_billing_agora\"][track-name=\"billingCardCtaLink\"] p.cfc-info-card-item-content:contains(\"View detailed charges\")",
                 "type": "fire_events"
             }
         },
@@ -83,7 +83,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "cfc-icon[icon=\"close\"]"
+                            "sizzleSelector": "[icon=\"close\"]"
                         }
                     ]
                 }
@@ -93,16 +93,25 @@
                 "events": [
                     "click"
                 ],
-                "selector": "cfc-icon[icon=\"close\"]",
+                "selector": "[icon=\"close\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "[icon=\"close\"]"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "a[aria-label*='Payment method']"
+                            "sizzleSelector": "a[jslog*=\"settings\"][aria-label*=\"Payment method\"]"
                         }
                     ]
                 }
@@ -112,7 +121,7 @@
                 "events": [
                     "click"
                 ],
-                "selector": "a[aria-label*='Payment method']",
+                "selector": "a[jslog*=\"settings\"][aria-label*=\"Payment method\"]",
                 "type": "fire_events"
             }
         },
@@ -146,7 +155,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "click"
@@ -174,7 +183,7 @@
                 "message": "We're filling in your card details ",
                 "title": "Filling in your Card Details"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -210,7 +219,7 @@
                 "message": "We're filling in your billing address",
                 "title": "Filling in your Billing Address"
             },
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "type": "autofill_card_data"
             }
@@ -246,7 +255,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true
+            "isRequired": false
         },
         {
             "conditional": [
@@ -259,7 +268,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "mousedown",
@@ -285,7 +294,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": true,
+            "isRequired": false,
             "operation": {
                 "events": [
                     "mousedown",

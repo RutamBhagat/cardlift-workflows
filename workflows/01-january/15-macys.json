@@ -153,6 +153,38 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "iframe[title=\"Expiry Year\"]"
+                        },
+                        {
+                            "sizzleSelector": "select[autocomplete=\"cc-exp-year\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardExpirationYear",
+                "events": [
+                    "focus",
+                    "focusin",
+                    "mousedown",
+                    "mouseup",
+                    "click",
+                    "input",
+                    "selectInputData",
+                    "change",
+                    "mouseup",
+                    "click"
+                ],
+                "selector": "select[autocomplete=\"cc-exp-year\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "iframe[title=\"CVV Number\"]"
                         },
                         {

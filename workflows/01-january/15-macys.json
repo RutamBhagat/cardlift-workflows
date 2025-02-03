@@ -108,6 +108,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardNumber",
                 "events": [
@@ -140,6 +141,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardExpirationMonth",
                 "events": [
@@ -172,6 +174,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardExpirationYear",
                 "events": [
@@ -204,6 +207,7 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": true,
             "operation": {
                 "cardProperty": "cardCvc",
                 "events": [

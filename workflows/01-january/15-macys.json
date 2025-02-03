@@ -121,6 +121,38 @@
                 {
                     "elementSelectors": [
                         {
+                            "sizzleSelector": "iframe[title=\"CVV Number\"]"
+                        },
+                        {
+                            "sizzleSelector": "input[id=\"cvvNumber\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardCvc",
+                "events": [
+                    "mousedown",
+                    "focus",
+                    "focusin",
+                    "mouseup",
+                    "click",
+                    "fillInputData",
+                    "input",
+                    "change",
+                    "blur",
+                    "focusout"
+                ],
+                "selector": "input[id=\"cvvNumber\"]",
+                "type": "fire_events"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
                             "sizzleSelector": "input[name='firstName']"
                         }
                     ]

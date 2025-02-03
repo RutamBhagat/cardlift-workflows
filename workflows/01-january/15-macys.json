@@ -74,14 +74,24 @@
                 }
             ],
             "executionType": "separate",
+            "isRequired": false,
             "operation": {
+                "cardProperty": "cardType",
                 "events": [
+                    "focus",
+                    "focusin",
+                    "mousedown",
+                    "mouseup",
+                    "click",
+                    "input",
                     "selectInputData",
-                    "change"
+                    "change",
+                    "mouseup",
+                    "click"
                 ],
                 "selector": "select[name='cardType']",
                 "type": "fire_events",
-                "value": "V"
+                "value": ""
             }
         },
         {

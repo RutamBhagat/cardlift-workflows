@@ -75,9 +75,44 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["selectInputData", "change"],
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
                 "selector": "select[name='cardType']",
-                "value": "V",
+                "type": "fire_events",
+                "value": "V"
+            }
+        },
+        {
+            "conditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"cc-number\"]"
+                        },
+                        {
+                            "sizzleSelector": "iframe[title=\"Card Number\"]"
+                        }
+                    ]
+                }
+            ],
+            "executionType": "separate",
+            "operation": {
+                "cardProperty": "cardNumber",
+                "events": [
+                    "mousedown",
+                    "focus",
+                    "focusin",
+                    "mouseup",
+                    "click",
+                    "fillInputData",
+                    "input",
+                    "change",
+                    "blur",
+                    "focusout"
+                ],
+                "selector": "input[id=\"cc-number\"]",
                 "type": "fire_events"
             }
         },
@@ -93,8 +128,11 @@
             ],
             "executionType": "separate",
             "operation": {
-                "cardProperty": "firstName", 
-                "events": ["fillInputData", "input"],
+                "cardProperty": "firstName",
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='firstName']",
                 "type": "fire_events"
             }
@@ -112,7 +150,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "lastName",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='lastName']",
                 "type": "fire_events"
             }
@@ -127,10 +168,13 @@
                     ]
                 }
             ],
-            "executionType": "separate", 
+            "executionType": "separate",
             "operation": {
                 "cardProperty": "address",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='addressLine1']",
                 "type": "fire_events"
             }
@@ -148,7 +192,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "address2",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='addressLine2']",
                 "type": "fire_events"
             }
@@ -166,7 +213,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "zip",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='zipCode']",
                 "type": "fire_events"
             }
@@ -184,7 +234,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "state",
-                "events": ["selectInputData", "change"],
+                "events": [
+                    "selectInputData",
+                    "change"
+                ],
                 "selector": "select[name='state']",
                 "type": "fire_events"
             }
@@ -202,7 +255,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "city",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='city']",
                 "type": "fire_events"
             }
@@ -220,7 +276,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "phone",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='phone']",
                 "type": "fire_events"
             }
@@ -238,7 +297,10 @@
             "executionType": "separate",
             "operation": {
                 "cardProperty": "email",
-                "events": ["fillInputData", "input"],
+                "events": [
+                    "fillInputData",
+                    "input"
+                ],
                 "selector": "input[name='email']",
                 "type": "fire_events"
             }
@@ -255,7 +317,9 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["click"],
+                "events": [
+                    "click"
+                ],
                 "selector": "input[name='isDefaultCard']",
                 "type": "fire_events"
             }
@@ -272,7 +336,9 @@
             ],
             "executionType": "separate",
             "operation": {
-                "events": ["click"],
+                "events": [
+                    "click"
+                ],
                 "selector": "button#save-btn",
                 "type": "fire_events"
             }

@@ -75,6 +75,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us fill in your card details properly",
+                "title": "Trouble Filling in your Card Details"
+            },
+            "info": {
+                "message": "We're filling in your card details ",
+                "title": "Filling in your Card Details"
+            },
             "operation": {
                 "events": [
                     "click"
@@ -226,6 +234,14 @@
                 }
             ],
             "executionType": "separate",
+            "help": {
+                "message": "Please help us properly fill in your billing address",
+                "title": "Trouble Filling in Billing Address"
+            },
+            "info": {
+                "message": "We're filling in your billing address",
+                "title": "Filling in your Billing Address"
+            },
             "operation": {
                 "cardProperty": "phone",
                 "events": [

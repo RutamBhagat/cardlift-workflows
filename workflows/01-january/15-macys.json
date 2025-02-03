@@ -125,7 +125,20 @@
                 ],
                 "selector": "input[id=\"cc-number\"]",
                 "type": "fire_events"
-            }
+            },
+            "retryConditional": [
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "input[id=\"cc-number\"]",
+                            "valueMatches": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "conditional": [

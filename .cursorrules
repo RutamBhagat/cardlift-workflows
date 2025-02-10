@@ -1,0 +1,30 @@
+refer to the `instructions.md` file for the instructions before you start.
+
+```bash
+.
+├── .cursorrules
+├── .gitignore
+└── workflows
+    ├── 01-january
+    │   ├── 00-figma.com.json
+    │   ├── 01-disney-plus.json
+    │   ├── 02-paramount-plus.json
+    │   ├── 03-ups.json
+    │   ├── 04-ebay.json
+    │   ├── 05-target.json
+    │   ├── 06-walmart.json
+    │   ├── 07-paypal.json
+    │   ├── 08-doordash.json
+    │   ├── 09-fedex.json
+    │   ├── 10-southwest.json
+    │   ├── 11-delta.json
+    │   ├── 12-usps.json
+    │   ├── 13-google-cloud-console.json
+    │   ├── 14-nordstrom.json
+    │   ├── 15-macys.json
+    │   └── other
+    │       └── netflix.com.json
+    └── 02-february
+
+5 directories, 19 files
+```

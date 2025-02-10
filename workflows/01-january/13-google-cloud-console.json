@@ -155,7 +155,7 @@
                 }
             ],
             "executionType": "separate",
-            "isRequired": false,
+            "isRequired": true,
             "operation": {
                 "events": [
                     "click"
@@ -311,6 +311,13 @@
                     "elementSelectors": [
                         {
                             "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Primary')) div.b3id-instrument-details-label:contains('$cardNumber')"
+                        }
+                    ]
+                },
+                {
+                    "elementSelectors": [
+                        {
+                            "sizzleSelector": "div.b3-payment-methods-instrument-details-section-ranked:has(span.b3id-form-title-content:textEquals('Backup')) div.b3id-instrument-details-label:contains('$cardNumber')"
                         }
                     ]
                 }

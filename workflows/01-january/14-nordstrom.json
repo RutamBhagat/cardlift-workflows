@@ -397,7 +397,7 @@
                 {
                     "elementSelectors": [
                         {
-                            "sizzleSelector": "section:has(strong:textEquals('Primary payment method')) span[id^='card-desc']:contains('$cardNumber')"
+                            "sizzleSelector": "section:has(strong:textEquals('Primary payment method')) span[id^='card-desc']:first():contains('$cardNumber')"
                         }
                     ]
                 }
